@@ -333,7 +333,7 @@ c.orderBy(em.getCriteriaBuilder().asc(from.get("lastName")));
     <h1>Well Done!</h1>
 
     <p>You've just visited application ! Please register your details.</p>
-    <a href="people/" class="btn btn-primary btn-large">Registration</a>
+    <a href="online/" class="btn btn-primary btn-large">Registration</a>
 
     <p style="margin-top: 20px">To know more at about
       <a href="/">Chandampally</a></p>
@@ -392,7 +392,7 @@ c.orderBy(em.getCriteriaBuilder().asc(from.get("lastName")));
     <h1>Well Done!</h1>
 
     <p>You've just visited application ! Please register your details.</p>
-    <a href="people/" class="btn btn-primary btn-large">Registration</a>
+    <a href="online/" class="btn btn-primary btn-large">Registration</a>
 
     <p style="margin-top: 20px">To know more at about
       <a href="/">Chandampally</a></p>
