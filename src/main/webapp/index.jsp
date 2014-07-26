@@ -3,7 +3,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Spring MVC and Hibernate Template</title>
+  <title>Village registration application</title>
 
   <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -69,12 +69,12 @@
 <div class="navbar navbar-fixed-top">
   <div class="navbar-inner">
     <div class="container">
-      <a href="/" class="brand">Spring MVC and Hibernate Template</a>
+      <a href="/" class="brand">Welcome to Chandampally Village</a>
       <!--
       IMPORTANT:
       This is Heroku specific markup. Remove to customize.
       -->
-      <a href="/" class="brand" id="heroku">by <strong>heroku</strong></a>
+      <a href="/" class="brand" id="heroku">by <strong>venkat s reddy</strong></a>
       <!-- /// -->
     </div>
   </div>
@@ -83,10 +83,10 @@
 <div class="container" id="getting-started">
 <div class="row">
 <div class="span8 offset2">
-<h1 class="alert alert-success">Your app is ready!</h1>
+<h1 class="alert alert-success">Thank you for visiting application!</h1>
 
 <div class="page-header">
-  <h1>Get started with your Spring MVC and Hibernate Application</h1>
+  <h1>Big Theme, In a Small Village</h1>
 </div>
 
 <div style="margin-bottom: 20px">
@@ -330,13 +330,13 @@ c.orderBy(em.getCriteriaBuilder().asc(from.get("lastName")));
   </ol>
 
   <div class="hero-unit">
-    <h1>Done!</h1>
+    <h1>Well Done!</h1>
 
-    <p>You've just cloned, modified, and deployed a brand new app.</p>
-    <a href="people/" class="btn btn-primary btn-large">See your changes</a>
+    <p>You've just visited application ! Please register your details.</p>
+    <a href="people/" class="btn btn-primary btn-large">Registration</a>
 
-    <p style="margin-top: 20px">Learn more at the
-      <a href="http://devcenter.heroku.com/categories/java">Heroku Dev Center</a></p>
+    <p style="margin-top: 20px">To know more at about
+      <a href="/">Chandampally</a></p>
   </div>
 </div>
 
@@ -388,16 +388,18 @@ c.orderBy(em.getCriteriaBuilder().asc(from.get("lastName")));
     <li><code>git commit -am "New changes to deploy"</code></li>
     <li><code>git push heroku master</code></li>
   </ol>
+<div class="hero-unit">
+    <h1>Well Done!</h1>
 
-  <div class="hero-unit">
-    <h1>Done!</h1>
+    <p>You've just visited application ! Please register your details.</p>
+    <a href="people/" class="btn btn-primary btn-large">Registration</a>
 
-    <p>You've just cloned, modified, and deployed a brand new app.</p>
-    <a href="people/" class="btn btn-primary btn-large">See your changes</a>
-
-    <p style="margin-top: 20px">Learn more at the
-      <a href="http://devcenter.heroku.com/categories/java">Heroku Dev Center</a></p>
+    <p style="margin-top: 20px">To know more at about
+      <a href="/">Chandampally</a></p>
   </div>
+</div>
+
+
 </div>
 </div>
 </div>
