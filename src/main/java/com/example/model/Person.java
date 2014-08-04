@@ -10,14 +10,14 @@ public class Person {
     @Id
     @GeneratedValue
     private Integer id;
-
+    
     private String firstName;
 
     private String lastName;
     
-    private Integer phone;
+    private String phone;
     
-    private Integer aadhar;
+    private String aadhar;
     
 
 
@@ -45,19 +45,19 @@ public class Person {
         this.lastName = lastName;
     }
 
-	public Integer getPhone() {
+	public String getPhone() {
 		return phone;
 	}
 
-	public void setPhone(Integer phone) {
+	public void setPhone(String phone) {
 		this.phone = phone;
 	}
 
-	public Integer getAadhar() {
+	public String getAadhar() {
 		return aadhar;
 	}
 
-	public void setAadhar(Integer aadhar) {
+	public void setAadhar(String aadhar) {
 		this.aadhar = aadhar;
 	}
 

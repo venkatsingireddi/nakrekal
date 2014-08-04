@@ -53,7 +53,7 @@
 
 
             <c:if  test="${!empty peopleList}">
-                <h3>People</h3>
+                <h3>Registered Persons</h3>
                 <table class="table table-bordered table-striped">
                     <thead>
                     <tr>
