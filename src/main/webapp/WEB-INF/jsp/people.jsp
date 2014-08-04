@@ -54,7 +54,7 @@
 
             <c:if  test="${!empty peopleList}">
                 <h3>Registered Persons</h3>
-                <table class="table table-bordered table-striped">
+                <table class="table">
                     <thead>
                     <tr>
                         <th>Last Name</th>

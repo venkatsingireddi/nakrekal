@@ -15,7 +15,7 @@ public class Person {
 
     private String lastName;
     
-    private Integer phone;
+    private Long phone;
     
     private Long aadhar;
     
@@ -45,11 +45,11 @@ public class Person {
         this.lastName = lastName;
     }
 
-	public Integer getPhone() {
+	public Long getPhone() {
 		return phone;
 	}
 
-	public void setPhone(Integer phone) {
+	public void setPhone(Long phone) {
 		this.phone = phone;
 	}
 
