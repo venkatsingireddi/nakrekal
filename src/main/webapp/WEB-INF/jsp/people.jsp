@@ -26,6 +26,13 @@
      <script type="text/javascript">
      $(document).ready(function() {
     	 $('#village-form').validate({
+    		 
+    			 errorElement: "div",
+             	//place all errors in a <div id="errors"> element
+            	 errorPlacement: function(error, element) {
+                 error.appendTo("div#errors");
+            	 },
+    		 
     	        rules: {
     	        	firstName:"required",
     	        	lastName:"required",
@@ -106,25 +113,25 @@
 	 		<form:label class="control-label col-xs-3" path="firstName">First Name</form:label>
             <div class="controls">
                 <form:input name="firstName" path="firstName" />
-             </div>
+             </div><div id="errors"></div>
      		</div>
      		<div class="control-group">
 	 		<form:label class="control-label col-xs-3" path="lastName">Last Name</form:label>
             <div class="controls">
-                <form:input name="lastName" path="lastName" /><br/>
-             </div>
+                <form:input name="lastName" path="lastName" />
+             </div><div id="errors"></div>
      		</div>
      		<div class="control-group">
 	 		<form:label class="control-label col-xs-3" path="phone">Phone Number</form:label>
             <div class="controls">
                 <form:input name="phone" path="phone" maxlength="10"/>
-             </div>
+             </div><div id="errors"></div>
      		</div>
            <div class="control-group">
 	 		<form:label class="control-label col-xs-3" path="aadhar">Aadhar Card Number</form:label>
             <div class="controls">
                 <form:input name="aadhar" path="aadhar" maxlength="12" />
-             </div>
+             </div><div id="errors"></div>
           </div>
           <div class="control-group">
 	 		<div class="controls">
