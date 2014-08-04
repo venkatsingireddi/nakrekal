@@ -15,9 +15,9 @@ public class Person {
 
     private String lastName;
     
-    private int phone;
+    private Integer phone;
     
-    private long aadhar;
+    private Long aadhar;
     
 
 
@@ -45,19 +45,19 @@ public class Person {
         this.lastName = lastName;
     }
 
-	public int getPhone() {
+	public Integer getPhone() {
 		return phone;
 	}
 
-	public void setPhone(int phone) {
+	public void setPhone(Integer phone) {
 		this.phone = phone;
 	}
 
-	public long getAadhar() {
+	public Long getAadhar() {
 		return aadhar;
 	}
 
-	public void setAadhar(long aadhar) {
+	public void setAadhar(Long aadhar) {
 		this.aadhar = aadhar;
 	}
 
