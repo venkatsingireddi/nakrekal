@@ -45,8 +45,8 @@
     				
     	           
     			},messages: {
-    				fname:"Please enter first name.",
-    				lname: "Please enter last name.",
+    				firstName:"Please enter first name.",
+    				lastName: "Please enter last name.",
     				
     				phone: {
     					required: "Please enter phone number",
