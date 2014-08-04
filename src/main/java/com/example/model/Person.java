@@ -14,6 +14,11 @@ public class Person {
     private String firstName;
 
     private String lastName;
+    
+    private Integer phone;
+    
+    private Integer aadhar;
+    
 
 
     public Integer getId() {
@@ -39,5 +44,21 @@ public class Person {
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
+
+	public Integer getPhone() {
+		return phone;
+	}
+
+	public void setPhone(Integer phone) {
+		this.phone = phone;
+	}
+
+	public Integer getAadhar() {
+		return aadhar;
+	}
+
+	public void setAadhar(Integer aadhar) {
+		this.aadhar = aadhar;
+	}
 
 }

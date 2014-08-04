@@ -8,7 +8,7 @@ import com.example.model.Person;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.criteria.CriteriaQuery;
-import javax.persistence.criteria.Root;
+//import javax.persistence.criteria.Root;
 
 import java.util.List;
 
