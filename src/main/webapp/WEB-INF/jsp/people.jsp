@@ -19,7 +19,59 @@
     -->
     <link href="http://heroku.github.com/template-app-bootstrap/heroku.css" rel="stylesheet">
     <!-- /// -->
+    <script src="/js/jquery-1.10.1.min.js"></script>
+    <script src="/js/jquery.validate.min.js"></script>
+    <script src="/js/jquery-ui.js"></script>
+    <script type="text/javascript" src="/js/countries.js"></script>
+     <script type="text/javascript">
+     $(document).ready(function() {
+    	 $('#village-form').validate({
+    	        rules: {
+    	        	firstName:"required",
+    	        	lastName:"required",
+    				
+    	        	phone: {
+    					required: true,
+    					digits: true,
+    					minlength: 10,
+    					maxlength: 10,
+    				},
+    				aadhar: {
+    					required: true,
+    					digits: true,
+    					minlength: 12,
+    					maxlength: 12,
+    				},
+    				
+    	           
+    			},messages: {
+    				fname:"Please enter first name.",
+    				lname: "Please enter last name.",
+    				
+    				phone: {
+    					required: "Please enter phone number",
+    					minlength: jQuery.format("Phone number should be {0} digits."),
+    					maxlength: jQuery.format("Phone number should be {0} digits."),
+    				},
+    				aadhar: {
+    					required: "Please enter 12 digit aadhar number",
+    					minlength: jQuery.format("Phone number should be {0} digits."),
+    					maxlength: jQuery.format("Phone number should be {0} digits."),
+    				},
+    				
+    			},
+    			ignore:[],		
+    		  }); 
+    	 $('#village-form').submit(function(e){
+         	e.preventDefault(); //STOP default action
+            
+             var $form = $(this);
 
+             // check if the input is valid
+             if(!$form.valid()) return false;
+    	 });
+     });
+     </script>
 </head>
 
 <body>
@@ -38,16 +90,16 @@
             <div class="page-header">
                 <h1>Register here</h1>
             </div>
-            <form:form method="post" action="add" commandName="person" class="form-vertical">
+            <form:form id="village-form" method="post" action="add" commandName="person" class="form-vertical">
 
                 <form:label path="firstName">First Name</form:label>
-                <form:input path="firstName" />
+                <form:input name="firstName" path="firstName" />
                 <form:label path="lastName">Last Name</form:label>
-                <form:input path="lastName" /><br/>
+                <form:input name="lastName" path="lastName" /><br/>
                 <form:label path="phone">Phone Number</form:label>
-                <form:input path="phone" /><br/>
+                <form:input name="phone" path="phone" /><br/>
                 <form:label path="aadhar">Aadhar Card Number</form:label>
-                <form:input path="aadhar" /><br/>
+                <form:input name="aadhar" path="aadhar" /><br/>
                 <input type="submit" value="Submit" class="btn"/>
             </form:form>
 
