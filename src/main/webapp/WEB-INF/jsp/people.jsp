@@ -62,14 +62,7 @@
     			},
     			ignore:[],		
     		  }); 
-    	 $('#village-form').submit(function(e){
-         	e.preventDefault(); //STOP default action
-            
-             var $form = $(this);
-
-             // check if the input is valid
-             if(!$form.valid()) return false;
-    	 });
+    	
      });
  </script>
  <style type="text/css">
