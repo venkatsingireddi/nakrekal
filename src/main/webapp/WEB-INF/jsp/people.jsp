@@ -71,7 +71,26 @@
              if(!$form.valid()) return false;
     	 });
      });
-     </script>
+ </script>
+ <style type="text/css">
+    .control-label{
+        color:#64644A;
+        font-size:110%;
+        font-family:Arial,Helvetica,sans-serif;
+        float: left;
+        width: 200px;
+        text-align: left;
+    }
+    .classLegend{
+    color: #636361;
+    font-size:130%;
+    font-family:Arial,Helvetica,sans-serif;
+    }
+    .error{    
+    color:#FF7E5F;
+          }
+   
+</style>
 </head>
 
 <body>
@@ -84,24 +103,42 @@
     </div>
 </div>
 
-<div class="container">
-    <div class="row">
-        <div class="span8 offset2">
-            <div class="page-header">
+	<div class="container">
+           	<div class="page-header">
                 <h1>Register here</h1>
             </div>
-            <form:form id="village-form" method="post" action="add" commandName="person" class="form-vertical">
+            <form:form id="village-form" method="post" action="add" commandName="person" class="form-horizontal">
 
-                <form:label path="firstName">First Name</form:label>
+	 		<div class="control-group">
+	 		<form:label class="control-label col-xs-3" path="firstName">First Name</form:label>
+            <div class="controls">
                 <form:input name="firstName" path="firstName" />
-                <form:label path="lastName">Last Name</form:label>
+             </div>
+     		</div>
+     		<div class="control-group">
+	 		<form:label class="control-label col-xs-3" path="lastName">Last Name</form:label>
+            <div class="controls">
                 <form:input name="lastName" path="lastName" /><br/>
-                <form:label path="phone">Phone Number</form:label>
-                <form:input name="phone" path="phone" /><br/>
-                <form:label path="aadhar">Aadhar Card Number</form:label>
-                <form:input name="aadhar" path="aadhar" /><br/>
+             </div>
+     		</div>
+     		<div class="control-group">
+	 		<form:label class="control-label col-xs-3" path="phone">Phone Number</form:label>
+            <div class="controls">
+                <form:input name="phone" path="phone" maxlength="10"/>
+             </div>
+     		</div>
+           <div class="control-group">
+	 		<form:label class="control-label col-xs-3" path="aadhar">Aadhar Card Number</form:label>
+            <div class="controls">
+                <form:input name="aadhar" path="aadhar" maxlength="12" />
+             </div>
+          </div>
+          <div class="control-group">
+	 		<div class="controls">
                 <input type="submit" value="Submit" class="btn"/>
-            </form:form>
+             </div>
+          </div>
+   </form:form>
 
 
             <c:if  test="${!empty peopleList}">
@@ -126,9 +163,7 @@
                     </tbody>
                 </table>
             </c:if>
-        </div>
     </div>
-</div>
-
+   
 </body>
 </html>
