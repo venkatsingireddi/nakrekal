@@ -113,25 +113,25 @@
 	 		<form:label class="control-label col-xs-3" path="firstName">First Name</form:label>
             <div class="controls">
                 <form:input name="firstName" path="firstName" />
-             </div><div id="errors"></div>
+             </div>
      		</div>
      		<div class="control-group">
 	 		<form:label class="control-label col-xs-3" path="lastName">Last Name</form:label>
             <div class="controls">
                 <form:input name="lastName" path="lastName" />
-             </div><div id="errors"></div>
+             </div>
      		</div>
      		<div class="control-group">
 	 		<form:label class="control-label col-xs-3" path="phone">Phone Number</form:label>
             <div class="controls">
                 <form:input name="phone" path="phone" maxlength="10"/>
-             </div><div id="errors"></div>
+             </div>
      		</div>
            <div class="control-group">
 	 		<form:label class="control-label col-xs-3" path="aadhar">Aadhar Card Number</form:label>
             <div class="controls">
                 <form:input name="aadhar" path="aadhar" maxlength="12" />
-             </div><div id="errors"></div>
+             </div>
           </div>
           <div class="control-group">
 	 		<div class="controls">
