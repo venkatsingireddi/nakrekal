@@ -3,7 +3,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>e-Village</title>
+  <title>e-Village Nakrekal</title>
 
   <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -69,14 +69,8 @@ $(document).ready(function () {
 <div class="navbar navbar-fixed-top">
   <div class="navbar-inner">
     <div class="container">
-      <a href="/" class="brand">Welcome to Chandampally Village</a>
-      <!--
-      IMPORTANT:
-      This is Heroku specific markup. Remove to customize.
-      -->
-      <a href="/" class="brand" id="heroku">by <strong>venkat s reddy</strong></a>
-      <!-- /// -->
-    </div>
+      <a href="/" class="brand">Welcome to Nakrekal</a>
+     </div>
   </div>
 </div>
 
