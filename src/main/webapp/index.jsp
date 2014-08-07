@@ -28,7 +28,9 @@
 
 <!-- JS
 ================================================== -->
-
+<script src="//code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/2.3.2/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/prettify/r224/prettify.min.js"></script>
 <script src="js/jquery.prettyPhoto.js"></script>
 <script src="js/jquery.flexslider.js"></script>
 <script src="js/jquery.custom.js"></script>
@@ -288,8 +290,6 @@ $(document).ready(function () {
 
 
 
-<script src="//code.jquery.com/jquery-1.9.1.min.js"></script>
-<script src="//netdna.bootstrapcdn.com/bootstrap/2.3.2/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/prettify/r224/prettify.min.js"></script>
+
 </body>
 </html>
