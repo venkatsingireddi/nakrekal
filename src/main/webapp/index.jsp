@@ -66,22 +66,9 @@ $(document).ready(function () {
 </head>
 
 <body onload="prettyPrint();">
-<div class="navbar navbar-fixed-top">
-  <div class="navbar-inner">
-    <div class="container">
-      <a href="/" class="brand">Welcome to Chandampally Village</a>
-      <!--
-      IMPORTANT:
-      This is Heroku specific markup. Remove to customize.
-      -->
-      <a href="/" class="brand" id="heroku">by <strong>venkat s reddy</strong></a>
-      <!-- /// -->
-    </div>
-  </div>
-</div>
 
 <div class="container" id="getting-started">
-<br/><br/><br/><br/>
+
 <div class="row headline"><!-- Begin Headline -->
     
      	<!-- Slider Carousel
