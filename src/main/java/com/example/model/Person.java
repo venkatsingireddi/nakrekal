@@ -62,4 +62,61 @@ public class Person {
 		this.aadhar = aadhar;
 	}
 
+	private String caste;
+	private String community;
+	private String revenue;
+	private String village;
+	private String gender;
+	private String aboutyou;
+	
+	public String getAboutyou() {
+		return aboutyou;
+	}
+
+	public void setAboutyou(String aboutyou) {
+		this.aboutyou = aboutyou;
+	}
+
+	public String getCaste() {
+		return caste;
+	}
+
+	public void setCaste(String caste) {
+		this.caste = caste;
+	}
+
+	public String getCommunity() {
+		return community;
+	}
+
+	public void setCommunity(String community) {
+		this.community = community;
+	}
+
+	public String getRevenue() {
+		return revenue;
+	}
+
+	public void setRevenue(String revenue) {
+		this.revenue = revenue;
+	}
+
+	public String getVillage() {
+		return village;
+	}
+
+	public void setVillage(String village) {
+		this.village = village;
+	}
+
+	public String getGender() {
+		return gender;
+	}
+
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+
+	
+	
 }

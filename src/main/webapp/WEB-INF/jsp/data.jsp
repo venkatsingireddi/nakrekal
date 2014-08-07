@@ -40,17 +40,18 @@
                 <table border="1">
                     <thead>
                     <tr>
-                        <th>Last Name</th>
-                        <th>First Name</th>
+                        <th>Name</th>
                         <th>Phone Number</th>
                         <th>Aadhar</th>
+                        <th>Village</th>
+                        
                     </tr>
                     </thead>
                     <tbody>
                     <c:forEach items="${peopleList}" var="person">
                         <tr>
-                            <td>${person.lastName}</td><td>${person.firstName}</td>
-                            <td>${person.phone}</td><td>${person.aadhar}</td>
+                            <td>${person.lastName},${person.firstName}</td><td>${person.phone}</td>
+                            <td>${person.aadhar}</td><td>${person.village}</td>
                             <td><form action="delete/${person.id}" method="post"><input type="submit" class="btn btn-danger btn-mini" value="Delete"/></form></td>
                         </tr>
                     </c:forEach>
