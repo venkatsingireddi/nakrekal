@@ -35,9 +35,10 @@
     </div>
 </div>
 <div class="container">
-   <c:if  test="${!empty peopleList}">
+  <div class="bs-example">
+       <c:if  test="${!empty peopleList}">
                 <h3>Registered Persons</h3>
-                <table border="1">
+                <table class="table">
                     <thead>
                     <tr>
                         <th>Name</th>
@@ -50,7 +51,7 @@
                     <tbody>
                     <c:forEach items="${peopleList}" var="person">
                         <tr>
-                            <td>${person.lastName},${person.firstName}</td><td>${person.phone}</td>
+                            <td>${person.firstName} , ${person.lastName}</td><td>${person.phone}</td>
                             <td>${person.aadhar}</td><td>${person.village}</td>
                             <td><form action="delete/${person.id}" method="post"><input type="submit" class="btn btn-danger btn-mini" value="Delete"/></form></td>
                         </tr>
@@ -58,6 +59,7 @@
                     </tbody>
                 </table>
   </c:if>
+  </div>
 </div>
 </body>
 </html>

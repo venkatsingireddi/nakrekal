@@ -193,12 +193,12 @@
                 <form:select name="village" path="village">
 					<form:option value="" label="Select Village" />
 					<form:option value="Adavi Bollaram(576921)" label="Adavi Bollaram" />
-					<form:option value="Chandam Palle (576922)" label="Chandam Pally" />
+					<form:option value="Chandam Pally (576922)" label="Chandam Pally" />
 					<form:option value="Chandupatla	(576927)" label="Chandupatla" />
-					<form:option value="Gorenkal Palle (576929)" label="Gorenkal Pally" />
+					<form:option value="Gorenkal Pally (576929)" label="Gorenkal Pally" />
 					<form:option value="Kadaparthy (576920)" label="Kadaparthy" />
 					<form:option value="Mandalapur (576930)" label="Mandalapur" />
-					<form:option value="Mangali Palle (576926)" label="Mangali Pally" />
+					<form:option value="Mangali Pally (576926)" label="Mangali Pally" />
 					<form:option value="Marrur	(576928)" label="Marrur" />
 					<form:option value="Nakrekal(CT) (576931)" label="Nakrekal(CT)" />
 					<form:option value="Nellibanda (576923)" label="Nellibanda" />
