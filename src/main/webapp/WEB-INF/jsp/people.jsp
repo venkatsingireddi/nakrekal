@@ -140,29 +140,6 @@
           </div>
    </form:form>
 
-
-            <c:if  test="${!empty peopleList}">
-                <h3>Registered Persons</h3>
-                <table class="table">
-                    <thead>
-                    <tr>
-                        <th>Last Name</th>
-                        <th>First Name</th>
-                        <th>Phone Number</th>
-                        <th>Aadhar</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <c:forEach items="${peopleList}" var="person">
-                        <tr>
-                            <td>${person.lastName}</td><td>${person.firstName}</td>
-                            <td>${person.phone}</td><td>${person.aadhar}</td>
-                            <td><form action="delete/${person.id}" method="post"><input type="submit" class="btn btn-danger btn-mini" value="Delete"/></form></td>
-                        </tr>
-                    </c:forEach>
-                    </tbody>
-                </table>
-            </c:if>
     </div>
    
 </body>

@@ -23,8 +23,7 @@ public class PersonController {
     public String listPeople(Map<String, Object> map) {
 
         map.put("person", new Person());
-        map.put("peopleList", personService.listPeople());
-
+       
         return "people";
     }
 
@@ -42,5 +41,11 @@ public class PersonController {
         personService.removePerson(personId);
 
         return "redirect:/online/";
+    }
+    
+    @RequestMapping("/list")// make url as "online/validate"
+    public String regisPeople(Map<String, Object> map) {
+    	 map.put("peopleList", personService.listPeople());
+         return "data";
     }
 }
