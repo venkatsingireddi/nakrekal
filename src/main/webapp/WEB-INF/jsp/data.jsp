@@ -22,7 +22,11 @@
     <script src="/js/jquery-1.10.1.min.js"></script>
     <script src="/js/jquery.validate.min.js"></script>
     <script src="/js/jquery-ui.js"></script>
-    
+    <style type="text/css">
+    .bs-example{
+    	margin: 20px;
+    }
+    </style>
 </head>
 
 <body>
@@ -34,8 +38,7 @@
         </div>
     </div>
 </div>
-<div class="container">
-  <div class="bs-example">
+<div class="bs-example">
        <c:if  test="${!empty peopleList}">
                 <h3>Registered Persons</h3>
                 <table class="table">
@@ -50,7 +53,7 @@
                     </thead>
                     <tbody>
                     <c:forEach items="${peopleList}" var="person">
-                        <tr>
+                        <tr class="danger">
                             <td>${person.firstName} , ${person.lastName}</td><td>${person.phone}</td>
                             <td>${person.aadhar}</td><td>${person.village}</td>
                             <td><form action="delete/${person.id}" method="post"><input type="submit" class="btn btn-danger btn-mini" value="Delete"/></form></td>
@@ -59,7 +62,7 @@
                     </tbody>
                 </table>
   </c:if>
-  </div>
+ 
 </div>
 </body>
 </html>

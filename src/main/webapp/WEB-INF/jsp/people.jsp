@@ -27,12 +27,8 @@
      $(document).ready(function() {
     	 $('#village-form').validate({
     		 
-    			/*  errorElement: "div",
-             	//place all errors in a <div id="errors"> element
-            	 errorPlacement: function(error, element) {
-                 error.appendTo("div#errors");
-            	 }, */
-    		 
+            	focusCleanup: true,
+            	focusInvalid: false,
     	        rules: {
     	        	firstName:"required",
     	        	lastName:"required",
@@ -112,6 +108,7 @@
 </div>
 
 	<div class="container">
+	  <div class="span9 offset2">
            	<div class="page-header">
                 <h1>Global village Registration Form</h1>
             </div>
@@ -227,6 +224,6 @@
    </form:form>
 
     </div>
-   
+   </div>
 </body>
 </html>
