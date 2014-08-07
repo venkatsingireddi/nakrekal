@@ -81,7 +81,7 @@ $(document).ready(function () {
 </div>
 
 <div class="container" id="getting-started">
-
+<br/><br/><br/><br/>
 <div class="row headline"><!-- Begin Headline -->
     
      	<!-- Slider Carousel
@@ -108,9 +108,6 @@ $(document).ready(function () {
              
         </div>
     </div><!-- End Headline -->
-
-
-
 
 
 
@@ -160,7 +157,7 @@ $(document).ready(function () {
                     <div class="post-info clearfix">
                         <h4><a href="blog-single.htm">A subject that is beautiful in itself</a></h4>
                         <ul class="blog-details-preview">
-                            <li><i class="icon-calendar"></i><strong>Posted on:</strong> May 16, 2014<li>
+                            <li><i class="icon-calendar"></i><strong>Posted on:</strong> Aug 8, 2014<li>
                             <li><i class="icon-user"></i><strong>Posted by:</strong>Admin<li>
                             
                         </ul>
@@ -174,7 +171,7 @@ $(document).ready(function () {
                     <div class="post-info clearfix">
                         <h4><a href="blog-single.htm">A great artist is always before his time</a></h4>
                         <ul class="blog-details-preview">
-                            <li><i class="icon-calendar"></i><strong>Posted on:</strong> May 16, 2014<li>
+                            <li><i class="icon-calendar"></i><strong>Posted on:</strong> Aug 8, 2014<li>
                             <li><i class="icon-user"></i><strong>Posted by:</strong>Admin<li></ul>
                     </div>
                     <p class="blog-summary">“There you will find the place I love most in the world. The place where I grew thin from dreaming. My village, rising from the plain.. You will see why a person would want to live there forever. Dawn, morning, mid-day, night: all the same, except for the changes in the air....the pure murmuring of life.” <p>
