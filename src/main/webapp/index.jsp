@@ -3,7 +3,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Village registration application</title>
+  <title>e-Village</title>
 
   <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -170,7 +170,7 @@ $(document).ready(function () {
 
                 <!-- Blog Item 2 -->
                  <div class="item">
-                    <a href="blog-single.htm"><img src="img/gallery/blog-med-img-1.jpg" alt="" class="align-left blog-thumb-preview" /></a>
+                    <a href="blog-single.htm"><img src="/img/blog-med-img-1.jpg" alt="" class="align-left blog-thumb-preview" /></a>
                     <div class="post-info clearfix">
                         <h4><a href="blog-single.htm">A great artist is always before his time</a></h4>
                         <ul class="blog-details-preview">
@@ -182,7 +182,7 @@ $(document).ready(function () {
 
                  <!-- Blog Item 3 -->
                  <div class="item">
-                    <a href="blog-single.htm"><img src="img/gallery/blog-med-img-1.jpg" alt="" class="align-left blog-thumb-preview" /></a>
+                    <a href="blog-single.htm"><img src="/img/blog-med-img-1.jpg" alt="" class="align-left blog-thumb-preview" /></a>
                     <div class="post-info clearfix">
                         <h4><a href="blog-single.htm">Is art everything to anybody?</a></h4>
                         <ul class="blog-details-preview">
