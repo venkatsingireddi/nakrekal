@@ -27,11 +27,11 @@
      $(document).ready(function() {
     	 $('#village-form').validate({
     		 
-    			 errorElement: "div",
+    			/*  errorElement: "div",
              	//place all errors in a <div id="errors"> element
             	 errorPlacement: function(error, element) {
                  error.appendTo("div#errors");
-            	 },
+            	 }, */
     		 
     	        rules: {
     	        	firstName:"required",
