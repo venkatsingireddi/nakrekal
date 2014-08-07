@@ -81,6 +81,41 @@
 </div>
 
 <div class="container" id="getting-started">
+
+<div class="row headline"><!-- Begin Headline -->
+    
+     	<!-- Slider Carousel
+        ================================================== -->
+        <div class="span8">
+            <div class="flexslider">
+              <ul class="slides">
+                <li><a href="gallery-single.htm"><img src="img/gallery/slider-img-1.jpg" alt="slider" /></a></li>
+                <li><a href="gallery-single.htm"><img src="img/gallery/slider-img-1.jpg" alt="slider" /></a></li>
+                <li><a href="gallery-single.htm"><img src="img/gallery/slider-img-1.jpg" alt="slider" /></a></li>
+                <li><a href="gallery-single.htm"><img src="img/gallery/slider-img-1.jpg" alt="slider" /></a></li>
+                <li><a href="gallery-single.htm"><img src="img/gallery/slider-img-1.jpg" alt="slider" /></a></li>
+              </ul>
+            </div>
+        </div>
+        
+        <!-- Headline Text
+        ================================================== -->
+        <div class="span4">
+        	<h3>Welcome to Chandampally<br/> e-Village<br/>
+            A Big Theme in a Small Village.</h3>
+            <p class="lead">Chandampally is part of Nakrekal Town and is located just 2km from NH9 Highway.</p>
+            <p>The Chandampally Village is both a physical space and a concept, in that its a place where we will mentor and help entrepreneurs and student entrepreneurs with a number of resources and events in and around the eVillage. The eVillage is designed for intense 24/7 entrepreneurship</p>
+             
+        </div>
+    </div><!-- End Headline -->
+
+
+
+
+
+
+
+
 <div class="row">
 <div class="span8 offset2">
 <h1 class="alert alert-success">Thank you for visiting application!</h1>
@@ -89,324 +124,193 @@
   <h1>Big Theme, In a Small Village</h1>
 </div>
 
-<div style="margin-bottom: 20px">
-  This is a template for a web application that uses Spring MVC and Hibernate. The sample code is a simple CRUD page
-  that manipulates records for a single model object. To try it out go to the <a href="people/">people page</a>. Then
-  use Eclipse or the Command Line to deploy some changes.
-</div>
-
-<ul id="tab" class="nav nav-tabs">
-  <li class="active"><a href="#eclipse-instructions" data-toggle="tab">Use Eclipse 3.7</a></li>
-  <li><a href="#cli-instructions" data-toggle="tab">Use Command Line</a></li>
-</ul>
-
-<div class="tab-content">
-
-
-<div id="eclipse-instructions" class="instructions tab-pane active">
-  <a name="using-eclipse"></a>
-
-  <div class="alert alert-warn">If you already created this app from the Heroku Eclipse Plugin, proceed to <a
-      href="#step3">Step 3</a>.
-    The following steps depends on the Heroku Eclipse plugin. If you do not have the Heroku Eclipse plugin installed and
-    configured,
-    follow a <a href="https://devcenter.heroku.com/articles/getting-started-with-heroku-eclipse#installation-and-setup"
-                target="_blank">step-by-step guide</a>
-    on Dev Center to install the plugin and
-    configure the plugin in Eclipse.
-  </div>
-
-  <h2>Step 1.Configure Heroku Eclipse preferences</h2>
-  <ol>
-    <li>Open <code>Eclipse</code><i class="icon-chevron-right"></i><code>Preferences</code></li>
-    <li>Select <code>Heroku</code></li>
-    <li>Enter your <code>Email</code> and <code>Password</code></li>
-    <li>Click <code>Login</code>. If your login was successful, your Heroku API key would be populated in the
-      <code>API Key</code> field.<br/>
-
-      <div class="modal hide" id="apiPreferences">
-        <div class="modal-header">
-          <a class="close" data-dismiss="modal"><i class="icon-remove"></i></a>
-
-          <h3>Setup API Key</h3>
-        </div>
-        <div class="modal-body">
-          <img src='https://template-app-instructions-screenshots.s3.amazonaws.com/eclipse/heroku_preferences.png'
-               alt="setup api key"/>
-        </div>
-      </div>
-                    <span class="screenshot">
-                      <a href="#apiPreferences" data-toggle="modal">
-                        <img
-                            src='https://template-app-instructions-screenshots.s3.amazonaws.com/eclipse/heroku_preferences.png'
-                            alt="setup api key" width="100">
-                        <i class="icon-zoom-in"></i>
-                      </a>
-                    </span>
-    </li>
-    <li>In the SSH Key section, click <code>Generate</code> if you need to generate a new key.
-      If you have previously generated and saved a SSH key is automatically loaded from the default location. If it is
-      not
-      in the default location, click <code>Load SSH Key</code><br/>
-    </li>
-    <li>Click on <code>Add</code> to add your SSH Key to Heroku
-      <div class="modal hide" id="sshkeyadd">
-        <div class="modal-header">
-          <a class="close" data-dismiss="modal"><i class="icon-remove"></i></a>
-
-          <h3>Add SSH Key to Heroku</h3>
-        </div>
-        <div class="modal-body">
-          <img src='https://template-app-instructions-screenshots.s3.amazonaws.com/eclipse/heroku_ssh_add.png'
-               alt="Add SSH Key to Heroku"/>
-        </div>
-      </div>
-	                    <span class="screenshot">
-	                      <a href="#sshkeyadd" data-toggle="modal">
-                          <img
-                              src='https://template-app-instructions-screenshots.s3.amazonaws.com/eclipse/heroku_ssh_add.png'
-                              alt="Add SSH Key to Heroku" width="100"/>
-                          <i class="icon-zoom-in"></i>
-                        </a>
-	                    </span>
-    </li>
-  </ol>
-
-  <h2>Step 2. Importing this App</h2>
-  <ol>
-    <li>Open <code>File</code><i class="icon-chevron-right"></i><code>Import</code> and expand the Heroku section
-      <div class="modal hide" id="importAppSelect">
-        <div class="modal-header">
-          <a class="close" data-dismiss="modal"><i class="icon-remove"></i></a>
-
-          <h3>Import App</h3>
-        </div>
-        <div class="modal-body">
-          <img src='https://template-app-instructions-screenshots.s3.amazonaws.com/eclipse/import_app_1.png'
-               alt="Import App"/>
-        </div>
-      </div>
-	                    <span class="screenshot">
-	                      <a href="#importAppSelect" data-toggle="modal">
-                          <img
-                              src='https://template-app-instructions-screenshots.s3.amazonaws.com/eclipse/import_app_1.png'
-                              alt="Import App" width="100"/>
-                          <i class="icon-zoom-in"></i>
-                        </a>
-	                    </span>
-
-    </li>
-    <li>Select <code>Existing Heroku Application</code><i class="icon-chevron-right"></i><code>Next</code></li>
-    <li>Select <code>
-      <script>document.write(appname());</script>
-    </code> and click <code>Next</code>
-
-      <div class="modal hide" id="importApp2">
-        <div class="modal-header">
-          <a class="close" data-dismiss="modal"><i class="icon-remove"></i></a>
-
-          <h3>Select App to import</h3>
-        </div>
-        <div class="modal-body">
-          <img src='https://template-app-instructions-screenshots.s3.amazonaws.com/eclipse/import_app_2.png'
-               alt="Create app from template"/>
-        </div>
-      </div>
-	                    <span class="screenshot">
-	                      <a href="#importApp2" data-toggle="modal">
-                          <img
-                              src='https://template-app-instructions-screenshots.s3.amazonaws.com/eclipse/import_app_2.png'
-                              alt="Create app from template" width="100"/>
-                          <i class="icon-zoom-in"></i>
-                        </a>
-	                    </span>
-    </li>
-    <li>Choose <code>Auto detected project</code>
-
-      <div class="modal hide" id="importApp3">
-        <div class="modal-header">
-          <a class="close" data-dismiss="modal"><i class="icon-remove"></i></a>
-
-          <h3>Project Type selection</h3>
-        </div>
-        <div class="modal-body">
-          <img src='https://template-app-instructions-screenshots.s3.amazonaws.com/eclipse/import_app_3.png'
-               alt="Project Type selection"/>
-        </div>
-      </div>
-	                    <span class="screenshot">
-	                      <a href="#importApp3" data-toggle="modal">
-                          <img
-                              src='https://template-app-instructions-screenshots.s3.amazonaws.com/eclipse/import_app_3.png'
-                              alt="Project Type selection" width="100"/>
-                          <i class="icon-zoom-in"></i>
-                        </a>
-	                    </span>
-    </li>
-    <li>Click <code>Finish</code> to complete the import. The plugin will use <a href="http://www.eclipse.org/egit/">eGit</a>
-      and clone the source code repository to a local Git repository.
-      <div class="modal hide" id="importApp4">
-        <div class="modal-header">
-          <a class="close" data-dismiss="modal"><i class="icon-remove"></i></a>
-
-          <h3>Local Project and Git Repository</h3>
-        </div>
-        <div class="modal-body">
-          <img src='https://template-app-instructions-screenshots.s3.amazonaws.com/eclipse/create_app_template_4.png'
-               alt="Local Project and Git Repository"/>
-        </div>
-      </div>
-	                    <span class="screenshot">
-	                      <a href="#importApp4" data-toggle="modal">
-                          <img
-                              src='https://template-app-instructions-screenshots.s3.amazonaws.com/eclipse/create_app_template_4.png'
-                              alt="Local Project and Git Repository" width="100"/>
-                          <i class="icon-zoom-in"></i>
-                        </a>
-	                    </span>
-    </li>
-  </ol>
-  <a name="step3" id="step3"></a>
-
-  <h2>Step 3. Makes some changes to the app</h2>
-  <ol>
-    <li>Open <code>PersonServiceImpl.java</code></li>
-    <li>Query the people in alphabetical order by replacing line 29 with the following two lines:
-                <pre class="prettyprint once language-java">
-Root&lt;Person&gt; from = c.from(Person.class);
-c.orderBy(em.getCriteriaBuilder().asc(from.get("lastName")));
-                </pre>
-    </li>
-  </ol>
-
-  <h2>Step 4. Deploy to Heroku</h2>
-  <ol>
-    <li>Right-click the project root and choose <code>Team</code> <i class="icon-chevron-right"></i> <code>Commit</code>
-    </li>
-    <li>Enter a commit message and click <code>Commit</code>
-
-      <div class="modal hide" id="commitChanges">
-        <div class="modal-header">
-          <a class="close" data-dismiss="modal"><i class="icon-remove"></i></a>
-
-          <h3>Commit Changes</h3>
-        </div>
-        <div class="modal-body">
-          <img src="https://s3.amazonaws.com/template-app-instructions-screenshots/eclipse/6-5-commit.png"
-               alt="Commit Changes"/>
-        </div>
-      </div>
-                <span class="screenshot">
-                  <a href="#commitChanges" data-toggle="modal">
-                    <img src="https://s3.amazonaws.com/template-app-instructions-screenshots/eclipse/6-5-commit.png"
-                         alt="Commit Changes" width="100"/>
-                    <i class="icon-zoom-in"></i>
-                  </a>
-                </span>
-    </li>
-    <li>Right-click the project root and choose <code>Team</code> <i class="icon-chevron-right"></i> <code>Push to
-      Upstream</code></li>
-    <li>Review the push results. At the bottom, a "... deployed to Heroku" message will appear.
-      <div class="modal hide" id="pushResults">
-        <div class="modal-header">
-          <a class="close" data-dismiss="modal"><i class="icon-remove"></i></a>
-
-          <h3>Push Results</h3>
-        </div>
-        <div class="modal-body">
-          <img src="https://s3.amazonaws.com/template-app-instructions-screenshots/eclipse/6-8-push-result.png"
-               alt="Push Results"/>
-        </div>
-      </div>
-                <span class="screenshot">
-                  <a href="#pushResults" data-toggle="modal">
-                    <img
-                        src="https://s3.amazonaws.com/template-app-instructions-screenshots/eclipse/6-8-push-result.png"
-                        alt="Push Results" width="100"/>
-                    <i class="icon-zoom-in"></i>
-                  </a>
-                </span>
-    </li>
-  </ol>
-
-  <div class="hero-unit">
-    <h1>Well Done!</h1>
-
-    <p>You've just visited application ! Please register your details.</p>
-    <a href="online/" class="btn btn-primary btn-large">Registration</a>
-
-    <p style="margin-top: 20px">To know more at about
-      <a href="/">Chandampally</a></p>
-  </div>
-</div>
-
-
-<div id="cli-instructions" class="instructions tab-pane">
-  <a name="using-cli"></a>
-
-  <h2>Step 1. Setup your environment</h2>
-  <ol>
-    <li>Install the <a href="http://toolbelt.heroku.com">Heroku Toolbelt</a>.</li>
-    <li>Install <a href="http://maven.apache.org/download.html">Maven</a>.</li>
-  </ol>
-
-  <h2>Step 2. Login to Heroku</h2>
-  <code>heroku login</code>
-  <blockquote>
-    Be sure to create, or associate an SSH key with your account.
-  </blockquote>
-            <pre>
-$ heroku login
-Enter your Heroku credentials.
-Email: naaman@heroku.com
-Password:
-Could not find an existing public key.
-Would you like to generate one? [Yn] Y
-Generating new SSH public key.
-Uploading SSH public key /Users/Administrator/.ssh/id_rsa.pub
-Authentication successful.</pre>
-
-  <h2>Step 3. Clone the App</h2>
-  <code>git clone -o heroku git@heroku.com:<script>document.write(appname())</script>.git</code>
-
-  <h2>Step 4. Makes some changes to the app</h2>
-  <ol>
-    <li>Open <code>src/main/java/com/example/PersonServiceImpl.java in your favorite editor</code></li>
-    <li>Query the people in alphabetical order by replacing line 29 with the following two lines:
-                <pre class="prettyprint once language-java">
-Root&lt;Person&gt; from = c.from(Person.class);
-c.orderBy(em.getCriteriaBuilder().asc(from.get("lastName")));
-                </pre>
-    </li>
-  </ol>
-
-  <h2>Step 5. Make sure the app still compiles</h2>
-  <code>mvn clean package</code>
-
-  <h2>Step 6. Deploy your changes</h2>
-  <ol>
-    <li><code>git commit -am "New changes to deploy"</code></li>
-    <li><code>git push heroku master</code></li>
-  </ol>
 <div class="hero-unit">
     <h1>Well Done!</h1>
 
     <p>You've just visited application ! Please register your details.</p>
     <a href="online/" class="btn btn-primary btn-large">Registration</a>
 
-    <p style="margin-top: 20px">To know more at about
-      <a href="/">Chandampally</a></p>
-  </div>
-</div>
-
-
 </div>
 </div>
 </div>
 </div>
 
-<!-- end tab content -->
-</div>
+
+
+<div class="row"><!-- Begin Bottom Section -->
+    
+    	<!-- Blog Preview
+        ================================================== -->
+    	<div class="span6">
+
+            <h5 class="title-bg">From the Blog 
+                <small>All the latest news</small>
+                <button id="btn-blog-next" class="btn btn-inverse btn-mini" type="button">&raquo;</button>
+                <button id="btn-blog-prev" class="btn btn-inverse btn-mini" type="button">&laquo;</button>
+            </h5>
+
+        <div id="blogCarousel" class="carousel slide ">
+
+            <!-- Carousel items -->
+            <div class="carousel-inner">
+
+                 <!-- Blog Item 1 -->
+                <div class="active item">
+                    <a href="blog-single.htm"><img src="img/gallery/blog-med-img-1.jpg" alt="" class="align-left blog-thumb-preview" /></a>
+                    <div class="post-info clearfix">
+                        <h4><a href="blog-single.htm">A subject that is beautiful in itself</a></h4>
+                        <ul class="blog-details-preview">
+                            <li><i class="icon-calendar"></i><strong>Posted on:</strong> May 16, 2014<li>
+                            <li><i class="icon-user"></i><strong>Posted by:</strong>Admin<li>
+                            
+                        </ul>
+                    </div>
+                    <p class="blog-summary">“Live life so well that, even if you die, the empty seats behind you will tell the story that, "yea, this soul did what God sent him/her to do". Give life and hope into your family, village, community, country, continent and the world at large. You can do it!” <p>
+                </div>
+
+                <!-- Blog Item 2 -->
+                 <div class="item">
+                    <a href="blog-single.htm"><img src="img/gallery/blog-med-img-1.jpg" alt="" class="align-left blog-thumb-preview" /></a>
+                    <div class="post-info clearfix">
+                        <h4><a href="blog-single.htm">A great artist is always before his time</a></h4>
+                        <ul class="blog-details-preview">
+                            <li><i class="icon-calendar"></i><strong>Posted on:</strong> May 16, 2014<li>
+                            <li><i class="icon-user"></i><strong>Posted by:</strong>Admin<li></ul>
+                    </div>
+                    <p class="blog-summary">“There you will find the place I love most in the world. The place where I grew thin from dreaming. My village, rising from the plain.. You will see why a person would want to live there forever. Dawn, morning, mid-day, night: all the same, except for the changes in the air....the pure murmuring of life.” <p>
+                </div>
+
+                 <!-- Blog Item 3 -->
+                 <div class="item">
+                    <a href="blog-single.htm"><img src="img/gallery/blog-med-img-1.jpg" alt="" class="align-left blog-thumb-preview" /></a>
+                    <div class="post-info clearfix">
+                        <h4><a href="blog-single.htm">Is art everything to anybody?</a></h4>
+                        <ul class="blog-details-preview">
+                            <li><i class="icon-calendar"></i><strong>Posted on:</strong> May 16, 2014<li>
+                            <li><i class="icon-user"></i><strong>Posted by:</strong>Admin<li></ul>
+                    </div>
+                    <p class="blog-summary">“I did a research assignment on life in the Middle Ages only last year. I found the era fascinating, all that chivalry and court romance. But I never pictured anything as poor as this village. This is the pits. There is no romance here, definitely no chivary. And it stinks--of sweat and smoke and sewage.” <p>
+                </div>
+                
+            </div>
+            </div> 	
+        </div>
+        
+        <!-- Client Area
+        ================================================== -->
+        <div class="span6">
+
+            <h5 class="title-bg">Highlights in
+                <small>Chandampally</small>
+                <button id="btn-client-next" class="btn btn-inverse btn-mini" type="button">&raquo;</button>
+                <button id="btn-client-prev" class="btn btn-inverse btn-mini" type="button">&laquo;</button>
+            </h5>
+
+            <!-- Client Testimonial Slider-->
+            <div id="clientCarousel" class="carousel slide no-margin">
+            <!-- Carousel items -->
+            <div class="carousel-inner">
+
+                <div class="active item">
+                    <p class="quote-text">"Highly rich with farmers and in producing Lemon, Rice and other crops. Milk production is very high in this village. Famous for fertile lands."<cite>--eVillage SRGroup</cite></p>
+                </div>
+
+                <div class="item">
+                    <p class="quote-text">"The population is around 500.The nearest villages are Peraka Bavi Gudem(1 km), Golla Gudem(1.5 km), Nellibanda(1.5 km), Bollaram(2 km)."<cite>--eVillage SRGroup</cite></p>
+                </div>
+
+                <div class="item">
+                    <p class="quote-text">"Chandampally lies on Northern side of Nakrekal.The National Highway No. 09 is leading to Vijayawada is passing throughout the village"<cite>--eVillage SRGroup</cite></p>
+                </div>
+                
+            </div>
+            </div>
+
+            <!-- Client Logo Thumbs-->
+            <ul class="client-logos">
+                <li><a href="#" class="client-link"><img src="img/gallery/client-img-1.png" alt="Client"></a></li>
+                <li><a href="#" class="client-link"><img src="img/gallery/client-img-2.png" alt="Client"></a></li>
+                <li><a href="#" class="client-link"><img src="img/gallery/client-img-3.png" alt="Client"></a></li>
+                <li><a href="#" class="client-link"><img src="img/gallery/client-img-4.png" alt="Client"></a></li>
+                <li><a href="#" class="client-link"><img src="img/gallery/client-img-5.png" alt="Client"></a></li>
+            </ul>
+
+        </div>
+        
+    </div><!-- End Bottom Section -->
+<!-- Footer Area
+        ================================================== -->
+
+	<div class="footer-container"><!-- Begin Footer -->
+    	<div class="container">
+        	<div class="row footer-row">
+                <div class="span3 footer-col">
+                    <h5>About Village</h5>
+                   <img src="img/piccolo-footer-logo.png" alt="Piccolo" /><br /><br />
+                    <address>
+                        <strong>e-Village</strong><br />
+                        Chandampally<br />
+                        Nakrekal,<br />
+						Nalgonda- 508211<br />
+						Greater Telangana Region<br />
+                    </address>
+                    <ul class="social-icons">
+                        <li><a href="#" class="social-icon facebook"></a></li>
+                        <li><a href="#" class="social-icon twitter"></a></li>
+                        <li><a href="#" class="social-icon dribble"></a></li>
+                        <li><a href="#" class="social-icon rss"></a></li>
+                        <li><a href="#" class="social-icon forrst"></a></li>
+                    </ul>
+                </div>
+                <div class="span3 footer-col">
+                    <h5>Latest Tweets</h5>
+                    <ul>
+                        <li><a href="#">@ village</a>Village life is plain,simple and purest form of happiness</li>
+                        <li><a href="#">@ village</a>Village life is the happiest compromise between the natural and the artificial.</li>
+                        <li><a href="#">@ village</a>The village is panorama of the charming scenes of nature</li>
+                    </ul>
+                </div>
+                <div class="span3 footer-col">
+                    <h5>Latest Posts</h5>
+                     <ul class="post-list">
+                        <li><a href="#"></a></li>
+                        <li><a href="#">If you want to hear beautiful replies, speak beautiful words.</a></li>
+                        <li><a href="#">You can be beautiful in your imperfections if you work hard to be good.</a></li>
+                        <li><a href="#">Do not shrink your Beautiful light, to make someone else feel more comfortable</a></li>
+                        <li><a href="#">Every day is a reason to live, because GOD made life indeed BEAUTIFUL!!</a></li>
+                    </ul>
+                </div>
+                <div class="span3 footer-col">
+                    <h5>Flickr Photos</h5>
+                    <ul class="img-feed">
+                        <li><a href="#"><img src="img/gallery/flickr-img-1.jpg" alt="Image Feed"></a></li>
+                        <li><a href="#"><img src="img/gallery/flickr-img-1.jpg" alt="Image Feed"></a></li>
+                        <li><a href="#"><img src="img/gallery/flickr-img-1.jpg" alt="Image Feed"></a></li>
+                        <li><a href="#"><img src="img/gallery/flickr-img-1.jpg" alt="Image Feed"></a></li>
+                        <li><a href="#"><img src="img/gallery/flickr-img-1.jpg" alt="Image Feed"></a></li>
+                        <li><a href="#"><img src="img/gallery/flickr-img-1.jpg" alt="Image Feed"></a></li>
+                        <li><a href="#"><img src="img/gallery/flickr-img-1.jpg" alt="Image Feed"></a></li>
+                        <li><a href="#"><img src="img/gallery/flickr-img-1.jpg" alt="Image Feed"></a></li>
+                        <li><a href="#"><img src="img/gallery/flickr-img-1.jpg" alt="Image Feed"></a></li>
+                        <li><a href="#"><img src="img/gallery/flickr-img-1.jpg" alt="Image Feed"></a></li>
+                        <li><a href="#"><img src="img/gallery/flickr-img-1.jpg" alt="Image Feed"></a></li>
+                        <li><a href="#"><img src="img/gallery/flickr-img-1.jpg" alt="Image Feed"></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row"><!-- Begin Sub Footer -->
+                <div class="span12 footer-col footer-sub">
+                    <div class="row no-margin">
+                        <div class="span6"><span class="left">Copyright 2014 Chandampally Village. All rights reserved.</span></div>
+                        
+                    </div>
+                </div>
+            </div><!-- End Sub Footer -->
+
+        </div>
+    </div><!-- End Footer -->
+
 
 
 <script src="//code.jquery.com/jquery-1.9.1.min.js"></script>
