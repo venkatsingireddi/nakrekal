@@ -10,59 +10,60 @@
 
   <link href="//netdna.bootstrapcdn.com/bootstrap/2.3.2/css/bootstrap.min.css" rel="stylesheet">
   <link href="//cdnjs.cloudflare.com/ajax/libs/prettify/r224/prettify.css" rel="stylesheet">
-
-  <!--
-  IMPORTANT:
-  This is Heroku specific styling. Remove to customize.
-  -->
   <link href="http://heroku.github.com/template-app-bootstrap/heroku.css" rel="stylesheet">
-  <style type="text/css">
-    .instructions {
-      display: none;
-    }
 
-    .instructions li {
-      margin-bottom: 10px;
-    }
+<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/bootstrap-responsive.css">
+<link rel="stylesheet" href="css/prettyPhoto.css" />
+<link rel="stylesheet" href="css/flexslider.css" />
+<link rel="stylesheet" href="css/custom-styles.css">
+  
+<!-- Favicons
+================================================== -->
+<link rel="shortcut icon" href="img/favicon.ico">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
 
-    .instructions h2 {
-      margin: 18px 0;
-    }
+<!-- JS<script src="js/bootstrap.js"></script>
+================================================== -->
+<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
 
-    .instructions blockquote {
-      margin-top: 10px;
-    }
+<script src="js/jquery.prettyPhoto.js"></script>
+<script src="js/jquery.flexslider.js"></script>
+<script src="js/jquery.custom.js"></script>
+<script type="text/javascript">
+$(document).ready(function () {
 
-    .screenshot {
-      margin-top: 10px;
-      display: block;
-    }
+    $("#btn-blog-next").click(function () {
+      $('#blogCarousel').carousel('next');
+    });
+     $("#btn-blog-prev").click(function () {
+      $('#blogCarousel').carousel('prev');
+    });
 
-    .screenshot a {
-      padding: 0;
-      line-height: 1;
-      display: inline-block;
-      text-decoration: none;
-    }
+     $("#btn-client-next").click(function () {
+      $('#clientCarousel').carousel('next');
+    });
+     $("#btn-client-prev").click(function () {
+      $('#clientCarousel').carousel('prev');
+    });
+    
+});
 
-    .screenshot img, .tool-choice img {
-      border: 1px solid #ddd;
-      -webkit-border-radius: 4px;
-      -moz-border-radius: 4px;
-      border-radius: 4px;
-      -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
-      -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
-      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
-    }
-  </style>
-  <!-- /// -->
-  <script type="text/javascript">
-    <!--
-    function appname() {
-      return location.hostname.substring(0, location.hostname.indexOf("."));
-    }
-    // -->
-  </script>
+ $(window).load(function(){
+
+    $('.flexslider').flexslider({
+        animation: "slide",
+        slideshow: true,
+        start: function(slider){
+          $('body').removeClass('loading');
+        }
+    });  
+});
+
+</script>
 </head>
 
 <body onload="prettyPrint();">
