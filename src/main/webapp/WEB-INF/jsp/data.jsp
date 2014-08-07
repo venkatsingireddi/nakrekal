@@ -37,7 +37,7 @@
 <div class="container">
    <c:if  test="${!empty peopleList}">
                 <h3>Registered Persons</h3>
-                <table class="table">
+                <table border="1">
                     <thead>
                     <tr>
                         <th>Last Name</th>
