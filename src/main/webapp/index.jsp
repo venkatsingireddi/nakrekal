@@ -66,9 +66,22 @@ $(document).ready(function () {
 </head>
 
 <body onload="prettyPrint();">
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a href="/" class="brand">Welcome to Chandampally Village</a>
+      <!--
+      IMPORTANT:
+      This is Heroku specific markup. Remove to customize.
+      -->
+      <a href="/" class="brand" id="heroku">by <strong>venkat s reddy</strong></a>
+      <!-- /// -->
+    </div>
+  </div>
+</div>
 
 <div class="container" id="getting-started">
-
+<br/><br/><br/><br/>
 <div class="row headline"><!-- Begin Headline -->
     
      	<!-- Slider Carousel
@@ -117,7 +130,7 @@ $(document).ready(function () {
 </div>
 </div>
 </div>
-</div>
+
 
 
 
@@ -140,7 +153,7 @@ $(document).ready(function () {
 
                  <!-- Blog Item 1 -->
                 <div class="active item">
-                    <a href="blog-single.htm"><img src="img/gallery/blog-med-img-1.jpg" alt="" class="align-left blog-thumb-preview" /></a>
+                    <a href="blog-single.htm"><img src="img/blog-med-img-1.jpg" alt="" class="align-left blog-thumb-preview" /></a>
                     <div class="post-info clearfix">
                         <h4><a href="blog-single.htm">A subject that is beautiful in itself</a></h4>
                         <ul class="blog-details-preview">
@@ -213,6 +226,14 @@ $(document).ready(function () {
         </div>
         
     </div><!-- End Bottom Section -->
+
+
+
+</div><!-- End of container -->
+
+
+
+
 <!-- Footer Area
         ================================================== -->
 
