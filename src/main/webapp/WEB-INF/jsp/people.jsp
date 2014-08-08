@@ -145,7 +145,7 @@
             <div class="controls">
                  
                 <label class="radio-inline">
-  					<form:radiobutton path="gender" value="Male" checked />Male
+  					<form:radiobutton path="gender" value="Male" checked="checked" />Male
 				</label>
 				<label class="radio-inline">
   					<form:radiobutton	path="gender" value="Female" />Female
