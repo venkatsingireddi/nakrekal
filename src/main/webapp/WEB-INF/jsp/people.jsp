@@ -143,7 +143,15 @@
           <div class="control-group">
 	 		<form:label class="control-label col-xs-3" path="gender">Gender</form:label>
             <div class="controls">
-                <form:radiobutton path="gender" value="Male" />Male <form:radiobutton	path="gender" value="Female" />Female
+                 
+                <label class="radio-inline">
+  					<form:radiobutton path="gender" value="Male" checked/>Male
+				</label>
+				<label class="radio-inline">
+  					<form:radiobutton	path="gender" value="Female" />Female
+				</label>
+                      
+                
              </div>
           </div>
           
