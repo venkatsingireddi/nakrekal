@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.example</groupId>
-    <artifactId>spring-hibernate-template</artifactId>
+    <groupId>com.isys</groupId>
     <packaging>war</packaging>
     <version>0.0.1-SNAPSHOT</version>
 
@@ -132,4 +131,5 @@
             
         </plugins>
     </build>
+    <artifactId>E-Village</artifactId>
 </project>
