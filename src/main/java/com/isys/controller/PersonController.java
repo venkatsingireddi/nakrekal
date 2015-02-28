@@ -1,4 +1,6 @@
-package com.example.controller;
+package com.isys.controller;
+
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -8,10 +10,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.example.model.Person;
-import com.example.service.PersonService;
-
-import java.util.Map;
+import com.isys.model.Person;
+import com.isys.service.PersonService;
 
 @Controller
 public class PersonController {
@@ -40,7 +40,7 @@ public class PersonController {
 
         personService.removePerson(personId);
 
-        return "redirect:/online/";
+        return "redirect:/online/list";
     }
     
     @RequestMapping("/list")// make url as "online/validate"
