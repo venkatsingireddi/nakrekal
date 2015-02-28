@@ -32,14 +32,17 @@ public class SessionFilter implements Filter {
         System.out.println("Requested Resource::"+uri);
          //&& !(uri.endsWith("html") || uri.endsWith("LoginServlet"))
         HttpSession session =  request.getSession(false);
-        if(session == null ){
+        
+        System.out.println(" Session interval "+session.getMaxInactiveInterval()+" Session Creation time : "+session.getCreationTime());
+        chain.doFilter(request, response);
+       /* if(session == null ){
         	System.out.println("Session Expired at :"+new Date());
             response.sendRedirect("/");
         }
         else{
             // pass the request along the filter chain
-        	chain.doFilter(request, response);
-        }
+        	
+        }*/
         
     }
     public void init(FilterConfig config) throws ServletException {
