@@ -11,7 +11,7 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+//import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
  
 public class SessionFilter implements Filter {
@@ -20,7 +20,7 @@ public class SessionFilter implements Filter {
             FilterChain chain) throws IOException, ServletException {
  
     	HttpServletRequest request = (HttpServletRequest) req;
-        HttpServletResponse response = (HttpServletResponse) res;
+        //HttpServletResponse response = (HttpServletResponse) res;
          
         //Get the IP address of client machine.
         String ipAddress = request.getRemoteAddr();
@@ -33,7 +33,7 @@ public class SessionFilter implements Filter {
          //&& !(uri.endsWith("html") || uri.endsWith("LoginServlet"))
         HttpSession session =  request.getSession(false);
         
-        System.out.println(" Session interval "+session.getMaxInactiveInterval());
+        System.out.println(" Session Status "+session.isNew());
         chain.doFilter(req, res);
        /* if(session == null ){
         	System.out.println("Session Expired at :"+new Date());
