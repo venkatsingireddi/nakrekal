@@ -106,7 +106,7 @@
     <div class="navbar-inner">
         <div class="container">
             <a href="/" class="brand">Welcome to Nakrekal</a>
-            <a href="/" class="brand" id="heroku">by <strong>ust global technologies</strong></a>
+            <a href="/" class="brand" id="heroku">by <strong>SDC Ltd. Nakrekal</strong></a>
         </div>
     </div>
 </div>
