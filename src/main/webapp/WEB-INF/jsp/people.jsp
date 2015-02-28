@@ -106,7 +106,7 @@
     <div class="navbar-inner">
         <div class="container">
             <a href="/" class="brand">Welcome to Nakrekal</a>
-            <a href="/" class="brand" id="heroku">by <strong>SDC Ltd. Nakrekal</strong></a>
+            <a href="/" class="brand" id="heroku">by <strong>SDC Ltd, Nakrekal.</strong></a>
         </div>
     </div>
 </div>
@@ -114,7 +114,7 @@
 	<div class="container">
 	  <div class="span9 offset2">
            	<div class="page-header">
-                <h1>Global village Registration Form</h1>
+                <h1>Global Village Registration Form</h1>
             </div>
             <form:form id="village-form" method="post" action="add" commandName="person" class="form-horizontal">
 
