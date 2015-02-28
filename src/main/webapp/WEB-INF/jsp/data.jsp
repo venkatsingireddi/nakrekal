@@ -38,6 +38,7 @@
         </div>
     </div>
 </div>
+<br/><br/><br/>
 <div class="bs-example">
        <c:if  test="${!empty peopleList}">
                 <h3>Registered Persons</h3>
