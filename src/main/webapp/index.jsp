@@ -83,11 +83,11 @@ $(document).ready(function () {
         <div class="span8">
             <div class="flexslider">
               <ul class="slides">
-                <li><a href="#"><img src="img/slider-img-1.jpg" alt="slider" /></a></li>
-                <li><a href="#"><img src="img/slider-img-1.jpg" alt="slider" /></a></li>
-                <li><a href="#"><img src="img/slider-img-1.jpg" alt="slider" /></a></li>
-                <li><a href="#"><img src="img/slider-img-1.jpg" alt="slider" /></a></li>
-                <li><a href="#"><img src="img/slider-img-1.jpg" alt="slider" /></a></li>
+                <li><a href="#"><img src="img/direction.jpg" alt="slider" /></a></li>
+                <li><a href="#"><img src="img/village.jpg" alt="slider" /></a></li>
+                <li><a href="#"><img src="img/colours.jpg" alt="slider" /></a></li>
+                <li><a href="#"><img src="img/villa.jpg" alt="slider" /></a></li>
+                <li><a href="#"><img src="img/agri.jpg" alt="slider" /></a></li>
               </ul>
             </div>
         </div>
