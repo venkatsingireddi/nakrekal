@@ -33,7 +33,7 @@ public class SessionFilter implements Filter {
          //&& !(uri.endsWith("html") || uri.endsWith("LoginServlet"))
         HttpSession session =  request.getSession(false);
         
-        System.out.println(" Session interval "+session.getMaxInactiveInterval()+" Session Creation time : "+session.getCreationTime());
+        System.out.println(" Session interval "+session.getMaxInactiveInterval());
         chain.doFilter(req, res);
        /* if(session == null ){
         	System.out.println("Session Expired at :"+new Date());
