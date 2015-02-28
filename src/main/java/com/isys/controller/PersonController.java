@@ -32,7 +32,7 @@ public class PersonController {
 
         personService.addPerson(person);
 
-        return "redirect:/online/";
+        return "redirect:/";
     }
 
     @RequestMapping("/delete/{personId}")
