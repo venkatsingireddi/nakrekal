@@ -34,7 +34,7 @@ public class SessionFilter implements Filter {
         HttpSession session =  request.getSession(false);
         
         System.out.println(" Session interval "+session.getMaxInactiveInterval()+" Session Creation time : "+session.getCreationTime());
-        chain.doFilter(request, response);
+        chain.doFilter(req, res);
        /* if(session == null ){
         	System.out.println("Session Expired at :"+new Date());
             response.sendRedirect("/");
