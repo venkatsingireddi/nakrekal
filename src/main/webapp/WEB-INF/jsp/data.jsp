@@ -18,7 +18,7 @@
       This is Heroku specific styling. Remove to customize.
     -->
     <link href="http://heroku.github.com/template-app-bootstrap/heroku.css" rel="stylesheet">
-    <!-- /// -->
+    
     <script src="/js/jquery-1.10.1.min.js"></script>
     <script src="/js/jquery.validate.min.js"></script>
     <script src="/js/jquery-ui.js"></script>
