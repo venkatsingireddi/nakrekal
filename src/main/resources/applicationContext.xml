@@ -44,7 +44,7 @@
                     
                 </props>
             </property>
-            <property name="hibernate.default_schema" value="heroku"></property>
+            <!-- <property name="hibernate.default_schema" value="heroku"></property> -->
         </bean>
     </beans>
 
