@@ -7,7 +7,7 @@ import javax.persistence.Table;
 //import javax.persistence.UniqueConstraint;
 
 @Entity
-@Table(name="person",schema="heroku")
+@Table(name="village")
 public class Person {
 
     @Id
