@@ -122,6 +122,13 @@ $(document).ready(function () {
     <a href="online/" class="btn btn-primary btn-large">Registration</a>
 
 </div>
+<div class="hero-unit">
+    <h1>Sign up with facebook !</h1>
+
+    <p>Do you have facebook logins</p>
+    <a href="online/facebook/" class="btn btn-primary btn-large">Click here</a>
+
+</div>
 </div>
 </div>
 
