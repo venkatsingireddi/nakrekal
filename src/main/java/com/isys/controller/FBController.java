@@ -1,5 +1,7 @@
 package com.isys.controller;
 
+import java.util.Map;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,6 +35,10 @@ public class FBController {
 	@Autowired
 	private FbOperationsHelper fbOperationsHelper;
 	
+	 @RequestMapping("/")
+	    public String fbPage(Map<String, Object> map) {
+	    	return "/fb/";
+	    }
 	
 
 	@RequestMapping(value="/profile/{providerUserId}/{facebookAccessToken}" , method = RequestMethod.GET)

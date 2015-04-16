@@ -48,4 +48,9 @@ public class PersonController {
     	 map.put("peopleList", personService.listPeople());
          return "data";
     }
+    
+    @RequestMapping("/facebook/")
+    public String fbPage(Map<String, Object> map) {
+    	return "/fb/";
+    }
 }
