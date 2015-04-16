@@ -16,20 +16,20 @@
     <context:component-scan base-package="com.isys" />
     
     <mvc:annotation-driven/>
-    
+    <!-- 
     <import resource="spring-social.xml"/>
 	<import resource="spring-servlet.xml"/>
 	
 	<bean id="deployProperties" class="org.springframework.beans.factory.config.PropertiesFactoryBean"  p:location="spring.properties" />
-        
+       -->  
     
   
 
-    <!-- <bean id="jspViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+     <bean id="jspViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="viewClass" value="org.springframework.web.servlet.view.JstlView" />
         <property name="prefix" value="/WEB-INF/jsp/" />
         <property name="suffix" value=".jsp" />
-    </bean> -->
+    </bean>
 
     <tx:annotation-driven />
     <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
