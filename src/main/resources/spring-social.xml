@@ -45,8 +45,8 @@
 	<bean class="org.springframework.social.connect.web.ConnectController"
 		p:applicationUrl="${application.url}"/>  
 		
-	<bean id="fbConnectionHelper" class="com.abstractlayers.demo.helper.FbConnectionHelper" scope="prototype" />
-	<bean id="fbOperationsHelper" class="com.abstractlayers.demo.helper.FbOperationsHelper" scope="prototype" />
+	<bean id="fbConnectionHelper" class="com.isys.fb.helper.FbConnectionHelper" scope="prototype" />
+	<bean id="fbOperationsHelper" class="com.isys.fb.helper.FbOperationsHelper" scope="prototype" />
 	
 	<!-- Declare a datasource that has pooling capabilities-->	 
 	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"

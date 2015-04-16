@@ -1,6 +1,7 @@
 <?xml  version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p" 
        xmlns:jdbc="http://www.springframework.org/schema/jdbc"
        xmlns:context="http://www.springframework.org/schema/context"
        xmlns:tx="http://www.springframework.org/schema/tx"
@@ -15,6 +16,14 @@
     <context:component-scan base-package="com.isys" />
     
     <mvc:annotation-driven/>
+    
+    <import resource="spring-social.xml"/>
+	
+	
+	<bean id="deployProperties" class="org.springframework.beans.factory.config.PropertiesFactoryBean"  p:location="spring.properties" />
+        
+    
+  
 
     <bean id="jspViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="viewClass" value="org.springframework.web.servlet.view.JstlView" />
@@ -47,6 +56,8 @@
             </property>
             <!-- <property name="hibernate.default_schema" value="heroku"></property> -->
         </bean>
+        
+		
     </beans>
 
     <beans profile="prod">

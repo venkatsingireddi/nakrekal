@@ -38,7 +38,7 @@
                         <bean class="org.springframework.oxm.jaxb.Jaxb2Marshaller">
                             <property name="packagesToScan">
                                 <list>
-                                    <value>com.abstractlayers.demo.dto</value>
+                                    <value>com.isys.dio</value>
                                 </list>
                             </property>
                         </bean>
