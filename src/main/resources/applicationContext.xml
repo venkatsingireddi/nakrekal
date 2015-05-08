@@ -15,6 +15,8 @@
     <context:component-scan base-package="com.isn" />
     
     <mvc:annotation-driven/>
+    
+    <bean id="restTemplate" class="org.springframework.web.client.RestTemplate"/>
 
     <bean id="jspViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="viewClass" value="org.springframework.web.servlet.view.JstlView" />
@@ -39,6 +41,7 @@
             <property name="jpaProperties">
                 <props>
                     <prop key="hibernate.dialect">org.hibernate.dialect.HSQLDialect</prop>
+                    <prop key="hibernate.show_sql">true</prop>
                     <prop key="hibernate.hbm2ddl.auto">create</prop>
                 </props>
             </property>
@@ -66,7 +69,7 @@
                     <prop key="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</prop>
                     <prop key="hibernate.show_sql">true</prop>
                     <!-- change this to 'verify' before running as a production app -->
-                    <prop key="hibernate.hbm2ddl.auto">update</prop>
+                    <prop key="hibernate.hbm2ddl.auto">create</prop>
                 </props>
             </property>
         </bean>
