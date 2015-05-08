@@ -14,9 +14,9 @@
 
 <link href="//netdna.bootstrapcdn.com/bootstrap/2.3.2/css/bootstrap.min.css" rel="stylesheet">
 <link href="http://heroku.github.com/template-app-bootstrap/heroku.css" rel="stylesheet">
-<link rel="stylesheet" href="css/prettyPhoto.css" />
-<link rel="stylesheet" href="css/flexslider.css" />
-<link rel="stylesheet" href="css/custom-styles.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/prettyPhoto.css" />
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/flexslider.css" />
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/custom-styles.css">
   
 <!-- Favicons
 ================================================== -->
@@ -27,11 +27,11 @@
 
 <!-- JS
 ================================================== -->
-<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
-<!-- <script src="js/bootstrap.js"></script> -->
-<script src="js/jquery.prettyPhoto.js"></script>
-<script src="js/jquery.flexslider.js"></script>
-<script src="js/jquery.custom.js"></script>
+<script src="${pageContext.request.contextPath}/js/jquery-1.10.1.min.js"></script>
+<script src="${pageContext.request.contextPath}/js/jquery-ui.js"></script>
+<script src="${pageContext.request.contextPath}/js/jquery.prettyPhoto.js"></script>
+<script src="${pageContext.request.contextPath}/js/jquery.flexslider.js"></script>
+<script src="${pageContext.request.contextPath}/js/jquery.custom.js"></script>
 
 <script type="text/javascript">
 $(document).ready(function () {
