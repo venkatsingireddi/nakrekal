@@ -24,7 +24,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.isn.model.FBHistory;
 import com.isn.model.Feedback;
-import com.isn.service.FacebookServiceImpl;
+import com.isn.service.FacebookService;
+
 
 @Controller
 
@@ -42,7 +43,7 @@ public class FacebookController {
 			//facebook.clientSecret=b2ae145fac0ae0ee7b86bbf9db8e7992
 	
 	@Autowired
-	FacebookServiceImpl facebookService;
+	FacebookService facebookService;
 
 	  
 	  
