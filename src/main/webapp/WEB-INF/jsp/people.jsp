@@ -11,21 +11,17 @@
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    
-	<!-- <link rel="stylesheet" href="css/bootstrap.css">
-	<link rel="stylesheet" href="css/bootstrap-responsive.css"> -->
-	<link href="//netdna.bootstrapcdn.com/bootstrap/2.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/2.3.2/css/bootstrap.min.css" rel="stylesheet">
+
     <!--
       IMPORTANT:
       This is Heroku specific styling. Remove to customize.
-      
     -->
     <link href="http://heroku.github.com/template-app-bootstrap/heroku.css" rel="stylesheet">
-    
+    <!-- /// -->
     <script src="/js/jquery-1.10.1.min.js"></script>
     <script src="/js/jquery.validate.min.js"></script>
     <script src="/js/jquery-ui.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="/js/countries.js"></script>
      <script type="text/javascript">
      $(document).ready(function() {
@@ -106,15 +102,15 @@
     <div class="navbar-inner">
         <div class="container">
             <a href="/" class="brand">Welcome to Nakrekal</a>
-            <a href="/" class="brand" id="heroku">by <strong>SDC Ltd, Nakrekal.</strong></a>
+            <a href="/" class="brand" id="heroku">by <strong>ust global technologies</strong></a>
         </div>
     </div>
 </div>
-<br/><br/><br/>
+
 	<div class="container">
 	  <div class="span9 offset2">
            	<div class="page-header">
-                <h1>Global Village Registration Form</h1>
+                <h1>Global village Registration Form</h1>
             </div>
             <form:form id="village-form" method="post" action="add" commandName="person" class="form-horizontal">
 

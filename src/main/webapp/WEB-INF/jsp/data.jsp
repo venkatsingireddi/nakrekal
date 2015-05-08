@@ -18,7 +18,7 @@
       This is Heroku specific styling. Remove to customize.
     -->
     <link href="http://heroku.github.com/template-app-bootstrap/heroku.css" rel="stylesheet">
-    
+    <!-- /// -->
     <script src="/js/jquery-1.10.1.min.js"></script>
     <script src="/js/jquery.validate.min.js"></script>
     <script src="/js/jquery-ui.js"></script>
@@ -33,12 +33,11 @@
 <div class="navbar navbar-fixed-top">
     <div class="navbar-inner">
         <div class="container">
-            <a href="/" class="brand">Welcome to SDC, Nakrekal</a>
+            <a href="/" class="brand">Welcome to Chandampally Village</a>
             <a href="/" class="brand" id="heroku">by <strong>venkat s reddy</strong></a>
         </div>
     </div>
 </div>
-<br/><br/><br/>
 <div class="bs-example">
        <c:if  test="${!empty peopleList}">
                 <h3>Registered Persons</h3>

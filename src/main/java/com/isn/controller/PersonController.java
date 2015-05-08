@@ -1,6 +1,4 @@
-package com.isys.controller;
-
-import java.util.Map;
+package com.isn.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -10,8 +8,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.isys.model.Person;
-import com.isys.service.PersonService;
+import com.isn.model.Person;
+import com.isn.service.PersonService;
+
+import java.util.Map;
 
 @Controller
 public class PersonController {
@@ -32,7 +32,7 @@ public class PersonController {
 
         personService.addPerson(person);
 
-        return "redirect:/";
+        return "redirect:/online/";
     }
 
     @RequestMapping("/delete/{personId}")
@@ -40,17 +40,12 @@ public class PersonController {
 
         personService.removePerson(personId);
 
-        return "redirect:/online/list";
+        return "redirect:/online/";
     }
     
     @RequestMapping("/list")// make url as "online/validate"
     public String regisPeople(Map<String, Object> map) {
     	 map.put("peopleList", personService.listPeople());
          return "data";
-    }
-    
-    @RequestMapping("/facebook/")
-    public String fbPage(Map<String, Object> map) {
-    	return "/fb/";
     }
 }

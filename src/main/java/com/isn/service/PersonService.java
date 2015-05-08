@@ -1,9 +1,9 @@
-package com.isys.service;
+package com.isn.service;
 
 
 import java.util.List;
 
-import com.isys.model.Person;
+import com.isn.model.Person;
 
 public interface PersonService {
     

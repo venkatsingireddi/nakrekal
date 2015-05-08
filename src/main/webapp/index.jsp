@@ -11,8 +11,9 @@
   
 
 <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="css/bootstrap.css">
-<link rel="stylesheet" href="css/bootstrap-responsive.css">
+
+<link href="//netdna.bootstrapcdn.com/bootstrap/2.3.2/css/bootstrap.min.css" rel="stylesheet">
+<link href="http://heroku.github.com/template-app-bootstrap/heroku.css" rel="stylesheet">
 <link rel="stylesheet" href="css/prettyPhoto.css" />
 <link rel="stylesheet" href="css/flexslider.css" />
 <link rel="stylesheet" href="css/custom-styles.css">
@@ -27,7 +28,7 @@
 <!-- JS
 ================================================== -->
 <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
-<script src="js/bootstrap.js"></script>
+<!-- <script src="js/bootstrap.js"></script> -->
 <script src="js/jquery.prettyPhoto.js"></script>
 <script src="js/jquery.flexslider.js"></script>
 <script src="js/jquery.custom.js"></script>
@@ -83,11 +84,11 @@ $(document).ready(function () {
         <div class="span8">
             <div class="flexslider">
               <ul class="slides">
-                <li><a href="#"><img src="img/direction.jpg" alt="slider" /></a></li>
-                <li><a href="#"><img src="img/village.jpg" alt="slider" /></a></li>
-                <li><a href="#"><img src="img/colours.jpg" alt="slider" /></a></li>
-                <li><a href="#"><img src="img/villa.jpg" alt="slider" /></a></li>
-                <li><a href="#"><img src="img/agri.jpg" alt="slider" /></a></li>
+                <li><a href="#"><img src="${pageContext.request.contextPath}/img/direction.jpg" alt="slider" /></a></li>
+                <li><a href="#"><img src="${pageContext.request.contextPath}/img/villa.jpg" alt="slider" /></a></li>
+                <li><a href="#"><img src="${pageContext.request.contextPath}/img/village.jpg" alt="slider" /></a></li>
+                <li><a href="#"><img src="${pageContext.request.contextPath}/img/agri.jpg" alt="slider" /></a></li>
+                <li><a href="#"><img src="${pageContext.request.contextPath}/img/ins.jpg" alt="slider" /></a></li>
               </ul>
             </div>
         </div>
@@ -126,7 +127,7 @@ $(document).ready(function () {
     <h1>Sign up with facebook !</h1>
 
     <p>Do you have facebook logins</p>
-    <a href="online/facebook/" class="btn btn-primary btn-large">Click here</a>
+    <a href="online/facebook/signin/" class="btn btn-primary btn-large">Click here</a>
 
 </div>
 </div>

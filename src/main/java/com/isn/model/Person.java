@@ -1,13 +1,11 @@
-package com.isys.model;
+package com.isn.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.Table;
 //import javax.persistence.UniqueConstraint;
 
 @Entity
-@Table(name="village")
 public class Person {
 
     @Id
@@ -23,16 +21,6 @@ public class Person {
     private Long aadhar;
     
 
-    
-    private String caste;
-	private String community;
-	private String revenue;
-	private String village;
-	private String gender;
-	private String aboutyou;
-	
-	private String country;
-	private String state;
 
     public Integer getId() {
         return id;
@@ -74,7 +62,12 @@ public class Person {
 		this.aadhar = aadhar;
 	}
 
-	
+	private String caste;
+	private String community;
+	private String revenue;
+	private String village;
+	private String gender;
+	private String aboutyou;
 	
 	public String getAboutyou() {
 		return aboutyou;
@@ -122,24 +115,6 @@ public class Person {
 
 	public void setGender(String gender) {
 		this.gender = gender;
-	}
-
-	
-	
-	public String getCountry() {
-		return country;
-	}
-
-	public void setCountry(String country) {
-		this.country = country;
-	}
-
-	public String getState() {
-		return state;
-	}
-
-	public void setState(String state) {
-		this.state = state;
 	}
 
 	
