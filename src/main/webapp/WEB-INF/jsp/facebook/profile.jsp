@@ -11,14 +11,10 @@
     
 	<link href="//netdna.bootstrapcdn.com/bootstrap/2.3.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="http://heroku.github.com/template-app-bootstrap/heroku.css" rel="stylesheet">
-    
-   <%--  <link href="${pageContext.request.contextPath}/css/bootstrap.min.css" rel="stylesheet">
-	  --%>
-    <script src="${pageContext.request.contextPath}/js/jquery-1.10.1.min.js"></script>
-    <script src="${pageContext.request.contextPath}/js/jquery.validate.min.js"></script>
-    <script src="${pageContext.request.contextPath}/js/jquery-ui.js"></script>
-    <%-- <script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script> --%>
-     <script type="text/javascript">
+    <script src="/js/jquery-1.10.1.min.js"></script>
+    <script src="/js/jquery.validate.min.js"></script>
+    <script src="/js/jquery-ui.js"></script>    
+    <script type="text/javascript">
      $(document).ready(function() {
     	 $('#feedback-form').validate({
     		 
