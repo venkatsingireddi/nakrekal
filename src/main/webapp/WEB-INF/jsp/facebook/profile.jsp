@@ -18,6 +18,34 @@
     <script src="${pageContext.request.contextPath}/js/jquery.validate.min.js"></script>
     <script src="${pageContext.request.contextPath}/js/jquery-ui.js"></script>
     <%-- <script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script> --%>
+     <script type="text/javascript">
+     $(document).ready(function() {
+    	 $('#feedback-form').validate({
+    		 
+            	focusCleanup: true,
+            	focusInvalid: false,
+    	        rules: {
+    	        	message:{
+    					required: true,
+    					minlength: 100,
+    					maxlength: 250,
+    				},
+    	        	feedBackType:"required",
+    				
+    			},messages: {
+    				message: {
+    					required: "Please Share your feedback.",
+    					minlength: jQuery.format("Feedback should be minimum {0} charactors."),
+    					maxlength: jQuery.format("Feedback should be maximum {0} charactors."),
+    				},
+    				feedBackType: "What is your feedback type ?",
+    				
+    			},
+    			ignore:[],		
+    		  }); 
+    	
+     });
+ </script>
         
 </head>
 
@@ -106,7 +134,7 @@
 <div class="hero-unit">
   <h3 class="alert alert-success">Your feedback is highly appreciated :</h3>
   <br/>
-  <form class="form-horizontal" role="form" action="feedback" method="post">
+  <form id="feedback-form" class="form-horizontal" role="form" action="feedback" method="post">
      <div class="form-group" style="margin-bottom: 10px">
       <label class="control-label col-sm-2" for="name">Your Name:</label>
       <div class="col-sm-4" style="margin-left: 2px">
