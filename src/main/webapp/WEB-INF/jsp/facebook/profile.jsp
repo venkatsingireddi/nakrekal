@@ -154,7 +154,7 @@
 <div class="hero-unit">
   <h3 class="alert alert-success">Your feedback is highly appreciated :</h3>
   <br/>
-  <form id="feedback-form" class="form-horizontal" role="form" action="feedback" method="post">
+  <form id="feedback-form" role="form" action="feedback" method="post">
      <div class="form-group" style="margin-bottom: 10px">
       <label class="control-label col-sm-2" for="name">Your Name:</label>
       <div class="col-sm-4" style="margin-left: 2px">

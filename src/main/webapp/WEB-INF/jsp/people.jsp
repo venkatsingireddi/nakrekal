@@ -117,7 +117,7 @@
            	<div class="page-header">
                 <h1>Global village Registration Form</h1>
             </div>
-            <form:form id="village-form" method="post" action="add" commandName="person" class="form-horizontal">
+            <form:form id="village-form" method="post" action="add" commandName="person" >
 
 	 		<div class="control-group">
 	 		<form:label class="control-label col-xs-3" path="firstName">First Name</form:label>
