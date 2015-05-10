@@ -93,10 +93,9 @@
     .error {
     color: #FB3A3A;
     display: inline-block;
-    margin-left: 5px;
+    margin-left: 7px;
     padding: 0;
     text-align: left;
-    width: 150px;
 }
    
 </style>
@@ -231,7 +230,7 @@
           
           <div class="control-group">
 	 		<div class="controls">
-                <input type="submit" value="Submit" class="btn"/>
+                <input type="submit" value="Submit" class="btn btn-primary btn-large"/>
              </div>
           </div>
    </form:form>

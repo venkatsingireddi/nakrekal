@@ -59,10 +59,10 @@
     .error {
     color: #FB3A3A;
     display: inline-block;
-    margin-left: 5px;
+    margin-left: 7px;
     padding: 0;
     text-align: left;
-    width: 150px;
+    
 }
    
 </style>
@@ -157,25 +157,25 @@
   <form id="feedback-form" role="form" action="feedback" method="post" class="form-horizontal">
      <div class="form-group" style="margin-bottom: 10px">
       <label class="control-label col-sm-2" for="name">Your Name:</label>
-      <div class="col-sm-10" style="margin-left: 2px">
+      <div class="col-sm-4" style="margin-left: 2px">
         <input type="text" class="form-control" name="name" placeholder="Your Name" value="${user.lastName}" readonly="readonly"/>
       </div>
     </div>
     <div class="form-group" style="margin-bottom: 10px">
       <label class="control-label col-sm-2" for="email">Email:</label>
-      <div class="col-sm-10" style="margin-left: 2px">
+      <div class="col-sm-4" style="margin-left: 2px">
         <input type="email" class="form-control" name="email" placeholder="Enter email" value="${user.email}" readonly="readonly"/>
       </div>
     </div>
     <div class="form-group" style="margin-bottom: 10px">
       <label class="control-label col-sm-2" for="message">Comments:</label>
-      <div class="col-sm-10" style="margin-left: 2px">          
+      <div class="col-sm-4" style="margin-left: 2px">          
         <textarea name="message" class="form-control" rows="3" placeholder="Your comments" maxlength="250"></textarea>
       </div>
     </div>
     <div class="form-group" style="margin-bottom: 10px">
         <label class="control-label col-sm-2">Feedback Type:</label>
-        <div class="col-sm-10" style="margin-left: 2px">
+        <div class="col-sm-4" style="margin-left: 2px">
 			<select name="feedBackType" class="form-control">
 			<option value="" selected>Choose One:</option>
 			<option value="Appreciation">Appreciation</option>
@@ -186,7 +186,7 @@
      <input type="hidden" name="status" value="Submitted"/>
      <input type="hidden" name="fbId" value="${user.id}"/>
     <div class="form-group">        
-      <div class="col-sm-10">
+      <div class="col-sm-4">
         <button type="submit" class="btn btn-primary btn-large">Submit</button>
       </div>
     </div>
