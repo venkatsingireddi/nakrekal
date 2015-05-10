@@ -90,7 +90,7 @@
     font-size:130%;
     font-family:Arial,Helvetica,sans-serif;
     }
-    .error {
+    input.error {
     color: #FB3A3A;
     display: inline-block;
     margin-left: 5px;
