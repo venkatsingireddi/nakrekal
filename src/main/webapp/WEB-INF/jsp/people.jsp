@@ -90,7 +90,7 @@
     font-size:130%;
     font-family:Arial,Helvetica,sans-serif;
     }
-    input.error {
+    .error {
     color: #FB3A3A;
     display: inline-block;
     margin-left: 5px;
@@ -117,7 +117,7 @@
            	<div class="page-header">
                 <h1>Global village Registration Form</h1>
             </div>
-            <form:form id="village-form" method="post" action="add" commandName="person" >
+            <form:form id="village-form" method="post" action="add" commandName="person" class="form-horizontal">
 
 	 		<div class="control-group">
 	 		<form:label class="control-label col-xs-3" path="firstName">First Name</form:label>
