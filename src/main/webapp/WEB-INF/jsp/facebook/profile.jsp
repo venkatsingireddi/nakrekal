@@ -56,7 +56,7 @@
     font-size:130%;
     font-family:Arial,Helvetica,sans-serif;
     }
-    label.error {
+    .error {
     color: #FB3A3A;
     display: inline-block;
     margin-left: 5px;
