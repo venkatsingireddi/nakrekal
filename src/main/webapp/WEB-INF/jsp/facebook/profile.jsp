@@ -56,9 +56,14 @@
     font-size:130%;
     font-family:Arial,Helvetica,sans-serif;
     }
-    .error{    
-    color:#FF7E5F;
-          }
+    label.error {
+    color: #FB3A3A;
+    display: inline-block;
+    margin-left: 5px;
+    padding: 0;
+    text-align: left;
+    width: 150px;
+}
    
 </style>
         
