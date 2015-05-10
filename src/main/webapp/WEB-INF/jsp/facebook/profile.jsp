@@ -42,6 +42,25 @@
     	
      });
  </script>
+ <style type="text/css">
+    .control-label{
+        color:#64644A;
+        font-size:110%;
+        font-family:Arial,Helvetica,sans-serif;
+        float: left;
+        width: 200px;
+        text-align: left;
+    }
+    .classLegend{
+    color: #636361;
+    font-size:130%;
+    font-family:Arial,Helvetica,sans-serif;
+    }
+    .error{    
+    color:#FF7E5F;
+          }
+   
+</style>
         
 </head>
 
