@@ -34,12 +34,12 @@ import com.isn.service.FacebookService;
 
 @RequestMapping(value = "/facebook")
 public class FacebookController {
-	
+	Logger log=Logger.getLogger(FacebookController.class);
 	
 	@Value(value = "${APP_SECRET}")	
-	private static String APP_SECRET = null;//b085a85527c14610fe15ca2cf0c21a1c
+	private String APP_SECRET = null;//b085a85527c14610fe15ca2cf0c21a1c
 	@Value(value = "${APP_ID}")
-	private static String APP_ID = null;//285312434946834
+	private String APP_ID = null;//285312434946834
 	 Logger logger=Logger.getLogger(FacebookController.class);
 	        //facebook.clientId=639716389447302
 			//facebook.clientSecret=b2ae145fac0ae0ee7b86bbf9db8e7992
@@ -57,12 +57,12 @@ public class FacebookController {
 		System.out.println(request.getScheme());
 		
 		System.out.println(request.getServerPort());//https://graph.facebook.com/oauth/authorize
-		if ("localhost".equals(request.getServerName())) {
-			APP_SECRET="";
-			APP_ID="";
-		} else {
+		if (!"localhost".equals(request.getServerName())) {
 			APP_SECRET = System.getenv("APP_SECRET");
 			APP_ID = System.getenv("APP_ID");
+		} else {
+			log.warn("Scret : "+APP_SECRET);
+			log.warn("App Id :"+APP_ID);
 		}
 		
 		
@@ -78,7 +78,7 @@ public class FacebookController {
 		try {
 			response.sendRedirect(faceBookLoginUrl);
 		} catch (IOException e) {
-
+			
 			e.printStackTrace();
 		}
 	}
@@ -88,7 +88,7 @@ public class FacebookController {
 			HttpServletRequest request,
 			@RequestParam(value="code",required=false) String code,Model model) throws MalformedURLException {
 		
-		 URL url = new URL(getAuthURL(code,request));
+		 URL url = new URL(getAuthURL(code,request,APP_ID,APP_SECRET));
 		 
          try {
              String result = readURL(url);
@@ -160,7 +160,7 @@ public class FacebookController {
 		return fbHistory;
 	}
 
-	public static String getAuthURL(String authCode,HttpServletRequest request) {
+	public static String getAuthURL(String authCode,HttpServletRequest request,String APP_ID ,String APP_SECRET) {
         return "https://graph.facebook.com/oauth/access_token?client_id=" + 
             APP_ID+"&redirect_uri="
             + request.getScheme()
