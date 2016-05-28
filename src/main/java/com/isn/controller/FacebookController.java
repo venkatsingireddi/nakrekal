@@ -15,6 +15,7 @@ import javax.servlet.http.HttpSession;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.social.facebook.api.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -35,9 +36,10 @@ import com.isn.service.FacebookService;
 public class FacebookController {
 	
 	
-
-	private static final String APP_SECRET = "b2ae145fac0ae0ee7b86bbf9db8e7992";//b085a85527c14610fe15ca2cf0c21a1c
-	private static final String APP_ID = "639716389447302";//285312434946834
+	@Value(value = "${APP_SECRET}")	
+	private static String APP_SECRET = null;//b085a85527c14610fe15ca2cf0c21a1c
+	@Value(value = "${APP_ID}")
+	private static String APP_ID = null;//285312434946834
 	 Logger logger=Logger.getLogger(FacebookController.class);
 	        //facebook.clientId=639716389447302
 			//facebook.clientSecret=b2ae145fac0ae0ee7b86bbf9db8e7992
@@ -53,7 +55,17 @@ public class FacebookController {
 //http://www.facebook.com/dialog/oauth?
 		System.out.println(request.getServerName());
 		System.out.println(request.getScheme());
+		
 		System.out.println(request.getServerPort());//https://graph.facebook.com/oauth/authorize
+		if ("localhost".equals(request.getServerName())) {
+			APP_SECRET="";
+			APP_ID="";
+		} else {
+			APP_SECRET = System.getenv("APP_SECRET");
+			APP_ID = System.getenv("APP_ID");
+		}
+		
+		
 		String faceBookLoginUrl = "http://www.facebook.com/dialog/oauth?client_id="
 				+ APP_ID
 				+ "&display=page&redirect_uri="
