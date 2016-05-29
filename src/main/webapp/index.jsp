@@ -1,5 +1,5 @@
 <!doctype html>
-
+<%@page contentType="text/html" import="java.util.*" %>
 <html>
 <head>
   <meta charset="utf-8">
@@ -67,14 +67,14 @@ $(document).ready(function () {
 </head>
 
 <body onload="prettyPrint();">
-<div class="navbar navbar-fixed-top">
-  <div class="navbar-inner">
-    <div class="container">
-      <a href="/" class="brand">Welcome to Nakrekal</a>
-     </div>
-  </div>
+<div class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+            <a href="<%=request.getContextPath()%>/" class="brand">Home</a>
+            <a href="" class="brand " id="heroku"><strong><%=new java.util.Date()%></strong></a>
+        </div>
+    </div>
 </div>
-
 <div class="container" id="getting-started">
 <br/><br/><br/><br/>
 <div class="row headline"><!-- Begin Headline -->
@@ -155,40 +155,40 @@ $(document).ready(function () {
 
                  <!-- Blog Item 1 -->
                 <div class="active item">
-                    <a href="blog-single.htm"><img src="img/blog-med-img-1.jpg" alt="" class="align-left blog-thumb-preview" /></a>
+                    <a href=""><img src="<%=request.getContextPath()%>/img/telangana_logo.png" alt="" class="align-left blog-thumb-preview" /></a>
                     <div class="post-info clearfix">
-                        <h4><a href="blog-single.htm">A subject that is beautiful in itself</a></h4>
+                        <h4><a href="">A subject that is beautiful in itself</a></h4>
                         <ul class="blog-details-preview">
-                            <li><i class="icon-calendar"></i><strong>Posted on:</strong> Aug 8, 2014<li>
+                            <li><i class="icon-calendar"></i><strong>Posted on:</strong><%=new java.util.Date()%><li>
                             <li><i class="icon-user"></i><strong>Posted by:</strong>Admin<li>
                             
                         </ul>
                     </div>
-                    <p class="blog-summary">“Live life so well that, even if you die, the empty seats behind you will tell the story that, "yea, this soul did what God sent him/her to do". Give life and hope into your family, village, community, country, continent and the world at large. You can do it!” <p>
+                    <p class="blog-summary">Live life so well that, even if you die, the empty seats behind you will tell the story that, "yea, this soul did what God sent him/her to do". Give life and hope into your family, village, community, country, continent and the world at large. You can do it!” <p>
                 </div>
 
                 <!-- Blog Item 2 -->
                  <div class="item">
-                    <a href="blog-single.htm"><img src="/img/blog-med-img-1.jpg" alt="" class="align-left blog-thumb-preview" /></a>
+                    <a href=""><img src="<%=request.getContextPath()%>/img/smart_village.png" alt="" class="align-left blog-thumb-preview" /></a>
                     <div class="post-info clearfix">
-                        <h4><a href="blog-single.htm">A great artist is always before his time</a></h4>
+                        <h4><a href="">A great artist is always before his time</a></h4>
                         <ul class="blog-details-preview">
-                            <li><i class="icon-calendar"></i><strong>Posted on:</strong> Aug 8, 2014<li>
+                            <li><i class="icon-calendar"></i><strong>Posted on:</strong> May 30, 2016<li>
                             <li><i class="icon-user"></i><strong>Posted by:</strong>Admin<li></ul>
                     </div>
-                    <p class="blog-summary">“There you will find the place I love most in the world. The place where I grew thin from dreaming. My village, rising from the plain.. You will see why a person would want to live there forever. Dawn, morning, mid-day, night: all the same, except for the changes in the air....the pure murmuring of life.” <p>
+                    <p class="blog-summary">There you will find the place I love most in the world. The place where I grew thin from dreaming. My village, rising from the plain.. You will see why a person would want to live there forever. Dawn, morning, mid-day, night: all the same, except for the changes in the air....the pure murmuring of life.” <p>
                 </div>
 
                  <!-- Blog Item 3 -->
                  <div class="item">
-                    <a href="blog-single.htm"><img src="/img/blog-med-img-1.jpg" alt="" class="align-left blog-thumb-preview" /></a>
+                    <a href=""><img src="<%=request.getContextPath()%>/img/future_village.png" alt="" class="align-left blog-thumb-preview" /></a>
                     <div class="post-info clearfix">
-                        <h4><a href="blog-single.htm">Is art everything to anybody?</a></h4>
+                        <h4><a href="">Is art everything to anybody?</a></h4>
                         <ul class="blog-details-preview">
-                            <li><i class="icon-calendar"></i><strong>Posted on:</strong> May 16, 2014<li>
+                            <li><i class="icon-calendar"></i><strong>Posted on:</strong> May 30, 2016<li>
                             <li><i class="icon-user"></i><strong>Posted by:</strong>Admin<li></ul>
                     </div>
-                    <p class="blog-summary">“I did a research assignment on life in the Middle Ages only last year. I found the era fascinating, all that chivalry and court romance. But I never pictured anything as poor as this village. This is the pits. There is no romance here, definitely no chivary. And it stinks--of sweat and smoke and sewage.” <p>
+                    <p class="blog-summary">I did a research assignment on life in the Middle Ages only last year. I found the era fascinating, all that chivalry and court romance. But I never pictured anything as poor as this village. This is the pits. There is no romance here, definitely no chivary. And it stinks--of sweat and smoke and sewage.” <p>
                 </div>
                 
             </div>
@@ -244,7 +244,7 @@ $(document).ready(function () {
         	<div class="row footer-row">
                 <div class="span3 footer-col">
                     <h5>About Village</h5>
-                   <img src="img/piccolo-footer-logo.png" alt="Piccolo" /><br /><br />
+                   <img src="<%=request.getContextPath()%>/img/future_village.png" alt="Piccolo" /><br /><br />
                     <address>
                         <strong>e-Village</strong><br />
                         Chandampally<br />
@@ -284,7 +284,7 @@ $(document).ready(function () {
             <div class="row"><!-- Begin Sub Footer -->
                 <div class="span12 footer-col footer-sub">
                     <div class="row no-margin">
-                        <div class="span6"><span class="left">Copyright 2014 Chandampally Village. All rights reserved.</span></div>
+                        <div class="span6"><span class="left">Copyright 2011-2016 Chandampally Village. All rights reserved.</span></div>
                         
                     </div>
                 </div>

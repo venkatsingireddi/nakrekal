@@ -8,6 +8,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.FileSystemResource;
 import org.springframework.core.io.Resource;
@@ -32,26 +33,23 @@ public class FacebookServiceImpl implements FacebookService {
 	
 	@Autowired
 	private RestTemplate restTemplate;
-
-	public User getFriendList(String accessToken) {
+	Logger log=Logger.getLogger(FacebookServiceImpl.class);
+	public User getFriendList(String accessToken,String appId) {
 		 List<HttpMessageConverter<?>> messageConverters=new ArrayList<HttpMessageConverter<?>>();
 		 StringHttpMessageConverter shc= new StringHttpMessageConverter();//new StringHttpMessageConverter(Charset.forName("UTF-8"))
 		 
 		 
 		 messageConverters.add(shc);
 		restTemplate.setMessageConverters(messageConverters);
-		Facebook facebook = new FacebookTemplate(accessToken);
+		Facebook facebook = new FacebookTemplate(accessToken,null,appId);
 		
 		boolean valid =facebook.isAuthorized();
-		System.out.println("Is accessed user ?  "+valid);
-		User profile = facebook.userOperations().getUserProfile();
-         //System.out.println("Number of friends are : "+friends.size());
 		
- 
-			//System.out.println("ID :"+profile.getId()+" Name :"+profile.getFirstName()+","+profile.getLastName()+"  B'day :"+profile.getAbout()+" Time zone :"+profile.getTimezone()+"  Email :"+profile.getEmail());
-			
-			//System.out.println(profile.getUpdatedTime());//
-			
+		
+		log.info("Is accessed user ?  "+valid);
+		
+		User profile = facebook.userOperations().getUserProfile();
+        
 		return profile;
 
 	}

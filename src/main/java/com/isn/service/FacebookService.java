@@ -9,7 +9,7 @@ import com.isn.model.Feedback;
 
 public interface FacebookService {
 	
-	User getFriendList(String accessToken);
+	User getFriendList(String accessToken,String appId);
 	void postPhotoAndTaggAllFriends(String accessToken);
 	void saveFBHistory(FBHistory fBHistory);
 	public List<FBHistory> getHistory(String id);

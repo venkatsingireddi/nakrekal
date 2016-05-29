@@ -6,14 +6,13 @@
     <packaging>war</packaging>
     <version>0.0.1-SNAPSHOT</version>
 	<properties>
-		<org.springframework.version>3.2.5.RELEASE</org.springframework.version>
+		<org.springframework.version>4.2.6.RELEASE</org.springframework.version>
 		<!-- <spring.data.jpa.version>1.4.3.RELEASE</spring.data.jpa.version> -->
-		<spring.security.version>3.2.0.RELEASE</spring.security.version>
-		<spring.social.version>1.1.0.RELEASE</spring.social.version>
-		<spring.social.facebook.version>2.0.0.RELEASE</spring.social.facebook.version>
-		<spring.social.twitter.version>1.1.0.RELEASE</spring.social.twitter.version>
-		<spring.social.linkedin>1.1.0.RELEASE</spring.social.linkedin>
-		<spring.social.google>1.1.0.RELEASE</spring.social.google>
+		<spring.security.version>3.2.9.RELEASE</spring.security.version>
+		<spring.social.version>1.1.4.RELEASE</spring.social.version>
+		<spring.social.facebook.version>2.0.3.RELEASE</spring.social.facebook.version>
+		<spring.social.twitter.version>1.1.2.RELEASE</spring.social.twitter.version>
+		
 		<jackson.mapper.version>1.9.9</jackson.mapper.version>
 		<jaxb-api.version>2.2.7</jaxb-api.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -36,7 +35,11 @@
 			<artifactId>spring-orm</artifactId>
 			<version>${org.springframework.version}</version>
 		</dependency>
-
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-aop</artifactId>
+			<version>${org.springframework.version}</version>
+		</dependency>
 		<!-- Spring Data JPA -->
 		<!-- <dependency>
 			<groupId>org.springframework.data</groupId>
@@ -65,13 +68,7 @@
 			<version>${spring.security.version}</version>
 		</dependency>
 
-		<!-- Use Apache HttpClient as HTTP Client -->
-		<dependency>
-			<groupId>org.apache.httpcomponents</groupId>
-			<artifactId>httpclient</artifactId>
-			<version>4.3.2</version>
-		</dependency>
-
+		
 		<!-- Spring Social -->
 		<dependency>
 			<groupId>org.springframework.social</groupId>
@@ -120,11 +117,38 @@
   			<artifactId>spring-social-google</artifactId>
   			<version>1.0.0.RELEASE</version>
 		</dependency>
+		<!-- http://mvnrepository.com/artifact/org.springframework.social/spring-social-linkedin -->
 		<dependency>
-  			<groupId>org.springframework.social</groupId>
-  			<artifactId>spring-social-linkedin</artifactId>
-  			<version>1.0.0.RELEASE</version>
+		    <groupId>org.springframework.social</groupId>
+		    <artifactId>spring-social-linkedin</artifactId>
+		    <version>1.0.2.RELEASE</version>
 		</dependency>
+		<!-- http://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-annotations -->
+		<dependency>
+		    <groupId>com.fasterxml.jackson.core</groupId>
+		    <artifactId>jackson-annotations</artifactId>
+		    <version>2.6.1</version>
+		</dependency>
+
+		<!-- http://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core -->
+		<dependency>
+		    <groupId>com.fasterxml.jackson.core</groupId>
+		    <artifactId>jackson-core</artifactId>
+		    <version>2.6.1</version>
+		</dependency>
+		<!-- http://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
+		<dependency>
+		    <groupId>com.fasterxml.jackson.core</groupId>
+		    <artifactId>jackson-databind</artifactId>
+		    <version>2.6.1</version>
+		</dependency>
+		<!-- http://mvnrepository.com/artifact/aopalliance/aopalliance -->
+		<dependency>
+		    <groupId>aopalliance</groupId>
+		    <artifactId>aopalliance</artifactId>
+		    <version>1.0</version>
+		</dependency>
+		
         <dependency>
             <groupId>taglibs</groupId>
             <artifactId>standard</artifactId>
@@ -160,14 +184,59 @@
             <artifactId>webapp-runner</artifactId>
             <version>7.0.34.0</version>
             <scope>provided</scope>
-        </dependency>        
+        </dependency>
         
-        
-        <dependency>
+        <!-- Spring dependency jars   -->     
+        <!-- http://mvnrepository.com/artifact/commons-codec/commons-codec -->
+		<dependency>
+   			<groupId>commons-codec</groupId>
+   			<artifactId>commons-codec</artifactId>
+    		<version>1.10</version>
+		</dependency>
+        <!-- http://mvnrepository.com/artifact/commons-logging/commons-logging -->
+		<dependency>
+    		<groupId>commons-logging</groupId>
+    		<artifactId>commons-logging</artifactId>
+    		<version>1.2</version>
+		</dependency>
+        <!-- http://mvnrepository.com/artifact/net.sf.jopt-simple/jopt-simple -->
+		<dependency>
+		    <groupId>net.sf.jopt-simple</groupId>
+		    <artifactId>jopt-simple</artifactId>
+		    <version>4.9</version>
+		</dependency>
+		<!-- http://mvnrepository.com/artifact/org.aspectj/aspectjweaver -->
+		<dependency>
+		    <groupId>org.aspectj</groupId>
+		    <artifactId>aspectjweaver</artifactId>
+		    <version>1.8.9</version>
+		</dependency>
+		 <dependency>
 			<groupId>log4j</groupId>
 			<artifactId>log4j</artifactId>
 			<version>1.2.17</version>
+		</dependency>	
+        <!-- http://mvnrepository.com/artifact/org.apache.httpcomponents/httpcore -->
+		<dependency>
+		    <groupId>org.apache.httpcomponents</groupId>
+		    <artifactId>httpcore</artifactId>
+		    <version>4.3.3</version>
 		</dependency>
+        
+        <!-- http://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient -->
+		<dependency>
+		    <groupId>org.apache.httpcomponents</groupId>
+		    <artifactId>httpclient</artifactId>
+		    <version>4.3.6</version>
+		</dependency>
+        
+       <!-- http://mvnrepository.com/artifact/org.springframework.security/spring-security-crypto -->
+		<dependency>
+		    <groupId>org.springframework.security</groupId>
+		    <artifactId>spring-security-crypto</artifactId>
+		    <version>3.2.9.RELEASE</version>
+		</dependency>
+		       
 		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-lang3</artifactId>

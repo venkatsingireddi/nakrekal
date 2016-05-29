@@ -52,17 +52,15 @@ public class FacebookController {
 	@RequestMapping(value = "/signin")
 	public void loginWithFacebook(HttpServletResponse response,
 			HttpServletRequest request) {
-//http://www.facebook.com/dialog/oauth?
-		System.out.println(request.getServerName());
-		System.out.println(request.getScheme());
-		
-		System.out.println(request.getServerPort());//https://graph.facebook.com/oauth/authorize
+
 		if (!"localhost".equals(request.getServerName())) {
 			APP_SECRET = System.getenv("APP_SECRET");
 			APP_ID = System.getenv("APP_ID");
+			log.info("Scret : "+APP_SECRET);
+			log.info("App Id :"+APP_ID);
 		} else {
-			log.warn("Scret : "+APP_SECRET);
-			log.warn("App Id :"+APP_ID);
+			log.info("Scret : "+APP_SECRET);
+			log.info("App Id :"+APP_ID);
 		}
 		
 		
@@ -108,9 +106,11 @@ public class FacebookController {
                      }
                  }
              }
-             //model.addAttribute("accessToken", accessToken);
-             //redirectAttributes.addFlashAttribute("accToken", accessToken);
+             
              request.getSession().setAttribute("accToken", accessToken);
+             request.getSession().setAttribute("appId", APP_ID);
+             request.getSession().setAttribute("appScret", APP_SECRET);
+             
              if ( StringUtils.isEmpty(accessToken) || expires==null ){
             	
             	 return "redirect:/";
@@ -121,7 +121,7 @@ public class FacebookController {
             
          } catch (IOException e) {
         	 return "redirect:/";
-             //throw new RuntimeException(e);
+             
          }
 		
          
@@ -135,8 +135,12 @@ public class FacebookController {
 		HttpSession session =request.getSession(false);
 		String accessToken=(String) session.getAttribute("accToken");
 		//logger.info("Got access token :" +accessToken);
-		logger.info("Redirected value is :"+accessToken);
-		User user=facebookService.getFriendList(accessToken);
+		//logger.info("Redirected value is :"+accessToken);
+		
+        String appId=(String) session.getAttribute("appId");
+		String appScret=(String) session.getAttribute("appScret");
+		User user=facebookService.getFriendList(accessToken,appId);
+				
 		FBHistory fBHistory =mapUserTOFBHistory(user);
 		facebookService.saveFBHistory(fBHistory);
 		List<FBHistory> fbList = facebookService.getHistory(user.getId());

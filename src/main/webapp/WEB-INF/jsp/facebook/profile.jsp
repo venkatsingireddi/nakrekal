@@ -74,7 +74,7 @@
 <div class="navbar navbar-default navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
-            <a href="/" class="brand">Home</a>
+            <a href="<%=request.getContextPath()%>/" class="brand">Home</a>
             <a href="" class="brand " id="heroku">Hello&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<strong>${user.lastName},&nbsp; &nbsp; &nbsp;${user.firstName}</strong></a>
         </div>
     </div>
