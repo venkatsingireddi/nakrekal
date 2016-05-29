@@ -27,13 +27,14 @@ import com.isn.model.Feedback;
 
 @Service
 public class FacebookServiceImpl implements FacebookService {
-
-	 @PersistenceContext
-	 EntityManager em;
+	Logger log=Logger.getLogger(FacebookServiceImpl.class);
+	
+	@PersistenceContext
+	EntityManager em;
 	
 	@Autowired
 	private RestTemplate restTemplate;
-	Logger log=Logger.getLogger(FacebookServiceImpl.class);
+	
 	public User getFriendList(String accessToken,String appId) {
 		 List<HttpMessageConverter<?>> messageConverters=new ArrayList<HttpMessageConverter<?>>();
 		 StringHttpMessageConverter shc= new StringHttpMessageConverter();//new StringHttpMessageConverter(Charset.forName("UTF-8"))
@@ -49,7 +50,9 @@ public class FacebookServiceImpl implements FacebookService {
 		log.info("Is accessed user ?  "+valid);
 		
 		User profile = facebook.userOperations().getUserProfile();
-        
+		log.info("User ID  "+profile.getId()+" Email:  "+profile.getEmail());
+		log.info("Link  "+profile.getLink());
+		log.info("User Name  "+profile.getName());
 		return profile;
 
 	}

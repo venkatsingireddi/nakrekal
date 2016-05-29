@@ -17,6 +17,7 @@ import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.social.facebook.api.User;
+import org.springframework.social.security.SocialUserDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -26,6 +27,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.isn.model.FBHistory;
 import com.isn.model.Feedback;
 import com.isn.service.FacebookService;
+import com.isn.util.SecurityUtil;
 
 
 @Controller
@@ -35,6 +37,9 @@ import com.isn.service.FacebookService;
 @RequestMapping(value = "/facebook")
 public class FacebookController {
 	Logger log=Logger.getLogger(FacebookController.class);
+	
+	/*@Autowired
+	private SocialUserDetailsService socialUserService;*/
 	
 	@Value(value = "${APP_SECRET}")	
 	private String APP_SECRET = null;//b085a85527c14610fe15ca2cf0c21a1c
@@ -130,10 +135,18 @@ public class FacebookController {
 
 	@RequestMapping(value="/profile")
 	public String getProfile(HttpServletRequest request,Map<String, Object> map)
-	{	//@ModelAttribute("accessToken") final String accessToken
-		//@PathVariable String token,
+	{	
+		String accessToken=null;
 		HttpSession session =request.getSession(false);
-		String accessToken=(String) session.getAttribute("accToken");
+		if (session ==null) {
+			return "redirect:/";
+		} else {
+			 accessToken=(String) session.getAttribute("accToken");
+			if (accessToken=="" || accessToken==null) {
+				return "redirect:/";
+			}
+		}
+		
 		//logger.info("Got access token :" +accessToken);
 		//logger.info("Redirected value is :"+accessToken);
 		
@@ -225,8 +238,33 @@ public class FacebookController {
 	public String getFeedbacks(HttpServletRequest request,Map<String, Object> map){
 		List<Feedback> feedbackList=facebookService.getAllFeedbacks();
 		map.put("feedbackList",feedbackList);
-		logger.warn("Number of feedbacks : "+feedbackList.size());
+		logger.info("Number of feedbacks : "+feedbackList.size());
 		return "facebook/feedback";
+		
+	}
+	
+	@RequestMapping(value="/signout")
+	public String signOut(HttpServletRequest request,HttpServletResponse response,Map<String, Object> map){
+		String user = SecurityUtil.getLoggedInUser();
+		HttpSession session =request.getSession(false);
+		// check if the account is connected to any social network accounts
+       logger.info("Name : "+user);
+        String accessToken=(String) session.getAttribute("accToken");
+       //https://www.facebook.com/logout.php?access_token=ACCESS_TOKEN&confirm=1&next=REDIRECT
+        String faceBookLoginUrl = "https://www.facebook.com/logout.php?access_token="+accessToken+"&confirm=1&next="
+				+ request.getScheme()
+				+ "://"
+				+ request.getServerName()
+				+ ":"
+				+ request.getServerPort()+request.getContextPath() + "/";
+
+		try {
+			response.sendRedirect(faceBookLoginUrl);
+		} catch (IOException e) {
+			
+			return "redirect:/";
+		}
+		return null;
 		
 	}
 	

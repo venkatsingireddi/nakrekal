@@ -76,6 +76,7 @@
     <div class="navbar-header">
             <a href="<%=request.getContextPath()%>/" class="brand">Home</a>
             <a href="" class="brand " id="heroku">Hello&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<strong>${user.lastName},&nbsp; &nbsp; &nbsp;${user.firstName}</strong></a>
+            <a href="online/facebook/signout" class="brand">Log out</a>
         </div>
     </div>
 </div><br><br>
