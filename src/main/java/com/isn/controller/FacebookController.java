@@ -17,7 +17,6 @@ import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.social.facebook.api.User;
-import org.springframework.social.security.SocialUserDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -244,11 +243,11 @@ public class FacebookController {
 	}
 	
 	@RequestMapping(value="/signout")
-	public String signOut(HttpServletRequest request,HttpServletResponse response,Map<String, Object> map){
-		String user = SecurityUtil.getLoggedInUser();
+	public String signOut(HttpServletRequest request,HttpServletResponse response){
+		
 		HttpSession session =request.getSession(false);
 		// check if the account is connected to any social network accounts
-       logger.info("Name : "+user);
+       
         String accessToken=(String) session.getAttribute("accToken");
        //https://www.facebook.com/logout.php?access_token=ACCESS_TOKEN&confirm=1&next=REDIRECT
         String faceBookLoginUrl = "https://www.facebook.com/logout.php?access_token="+accessToken+"&confirm=1&next="
