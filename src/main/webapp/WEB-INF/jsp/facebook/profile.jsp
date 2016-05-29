@@ -74,9 +74,9 @@
 <div class="navbar navbar-default navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
-            <a href="<%=request.getContextPath()%>/online/facebook/signout" class="brand">Home</a>
-            <a href="" class="brand" id="heroku">Hello&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<strong>${user.firstName},&nbsp; &nbsp; &nbsp;${user.lastName}</strong></a>
-            <a href="<%=request.getContextPath()%>/online/facebook/signout" class="brand"><strong>Log out</strong></a>
+            <a href='<%=request.getContextPath()%>/online/facebook/signout' class="brand">Home</a>
+            <a href='' class="brand" id="heroku">Hello&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<strong>${user.firstName},&nbsp; &nbsp; &nbsp;${user.lastName}</strong></a>
+            <a href='<%=request.getContextPath()%>/online/facebook/signout' class="brand"><strong>Log out</strong></a>
         </div>
     </div>
 </div><br><br>
