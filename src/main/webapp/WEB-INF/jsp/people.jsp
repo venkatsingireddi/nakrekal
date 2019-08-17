@@ -7,7 +7,7 @@
 <head>
     <meta charset="utf-8">
     <title>Registration</title>
-
+	<meta name="google-site-verification" content="4v1WNOV_c8u8_Wga8C0-q2sRATu7rvBTMf5mViOUUa0" />
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -106,7 +106,7 @@
     <div class="navbar-inner">
         <div class="container">
             <a href="/" class="brand">Welcome to Nakrekal</a>
-            <a href="/" class="brand" id="heroku">by <strong>ust global technologies</strong></a>
+            <a href="/" class="brand" id="heroku">by <strong>SOFTWARE LABS LLC</strong></a>
         </div>
     </div>
 </div>
