@@ -26,7 +26,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.isn.model.FBHistory;
 import com.isn.model.Feedback;
 import com.isn.service.FacebookService;
-import com.isn.util.SecurityUtil;
 
 
 @Controller
@@ -36,10 +35,6 @@ import com.isn.util.SecurityUtil;
 @RequestMapping(value = "/facebook")
 public class FacebookController {
 	Logger log=Logger.getLogger(FacebookController.class);
-	
-	/*@Autowired
-	private SocialUserDetailsService socialUserService;*/
-	
 	
 	
 	@Value(value = "${APP_SECRET}")	
