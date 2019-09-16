@@ -40,6 +40,8 @@ public class FacebookController {
 	/*@Autowired
 	private SocialUserDetailsService socialUserService;*/
 	
+	
+	
 	@Value(value = "${APP_SECRET}")	
 	private String APP_SECRET = null;//b085a85527c14610fe15ca2cf0c21a1c
 	@Value(value = "${APP_ID}")
